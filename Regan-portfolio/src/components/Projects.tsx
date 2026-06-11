@@ -63,7 +63,7 @@ function BarberVaultMockup() {
       {/* Header bar */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-[#FFD000]" />
+        <img src="/barbervault-logo.png" alt="BarberVault" className="w-5 h-5 object-contain" />
           <span className="text-[#FFD000] text-xs font-bold">BarberVault</span>
         </div>
         <div className="flex gap-1.5">
@@ -119,7 +119,8 @@ function SprtedMockup() {
       </div>
       {/* Profile stats */}
       <div className="flex items-center gap-3 mb-4 bg-white/5 rounded-lg p-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-800 flex-shrink-0" />
+       <img src="/sprted-pfp.jpg" alt="SPRTED" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+    
         <div>
           <div className="text-xs font-semibold">@sprted</div>
           <div className="text-[10px] text-white/40">Sports Content</div>
