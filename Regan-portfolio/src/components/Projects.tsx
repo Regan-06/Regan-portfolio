@@ -113,38 +113,75 @@ function BarberVaultMockup() {
 function SprtedMockup() {
   return (
     <div className="w-full h-full bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/10 p-4">
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-2 h-2 rounded-full bg-purple-400" />
-        <span className="text-purple-400 text-xs font-bold">SPRTED</span>
-      </div>
-      {/* Profile stats */}
       <div className="flex items-center gap-3 mb-4 bg-white/5 rounded-lg p-3">
-       <img src="/sprted-pfp.jpg" alt="SPRTED" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
-    
+        <img src="/sprted-pfp.jpg" alt="SPRTED" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+
         <div>
           <div className="text-xs font-semibold">@sprted</div>
-          <div className="text-[10px] text-white/40">Sports Content</div>
+          <div className="text-[10px] text-white/40">Video editing</div>
         </div>
         <div className="ml-auto text-right">
           <div className="text-sm font-bold text-purple-400">10.2K</div>
           <div className="text-[10px] text-white/40">Followers</div>
         </div>
       </div>
-      {/* Video grid */}
-      <div className="grid grid-cols-3 gap-1.5">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="aspect-[9/16] rounded-md bg-gradient-to-b from-purple-900/40 to-black/80 flex items-center justify-center relative overflow-hidden"
-          >
-            <div className="w-4 h-4 rounded-full border border-white/30 flex items-center justify-center">
-              <Play size={8} className="text-white/60 ml-0.5" />
+
+      <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            {
+              src: "/sprted-desktop-rajon-rondo.png",
+              alt: "Desktop editing timeline for a Rajon Rondo basketball edit",
+            },
+            {
+              src: "/sprted-desktop-jalen-brunson.png",
+              alt: "Desktop editing timeline for a Jalen Brunson basketball edit",
+            },
+          ].map((edit) => (
+            <div
+              key={edit.src}
+              className="rounded-lg border border-white/10 bg-[#17171a] p-1.5 shadow-xl shadow-black/40"
+            >
+              <div className="overflow-hidden rounded-md bg-black">
+                <img
+                  src={edit.src}
+                  alt={edit.alt}
+                  className="aspect-video h-full w-full object-cover object-top"
+                />
+              </div>
+              <div className="mx-auto mt-1.5 h-1 w-10 rounded-full bg-white/15" />
             </div>
-            <div className="absolute bottom-1 right-1 text-[8px] text-white/40">
-              {(Math.random() * 50 + 5).toFixed(1)}K
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 gap-3">
+        {[
+          {
+            src: "/sprted-edit-bad-guy.png",
+            alt: "Mobile edit timeline for BAD GUY basketball video",
+          },
+          {
+            src: "/sprted-edit-nuggets.png",
+            alt: "Mobile edit timeline for Denver Nuggets basketball graphic",
+          },
+        ].map((edit) => (
+          <div
+            key={edit.src}
+            className="relative rounded-[1.6rem] border border-white/15 bg-[#17171a] p-1.5 shadow-2xl shadow-black/50"
+          >
+            <div className="relative aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-black">
+              <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
+              <img
+                src={edit.src}
+                alt={edit.alt}
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.25rem] ring-1 ring-inset ring-white/10" />
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
