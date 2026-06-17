@@ -6,30 +6,30 @@ import { Layers, Merge, Clock, Target } from "lucide-react";
 const reasons = [
   {
     icon: Target,
-    title: "Custom Solutions",
+    title: "No templates",
     description:
-      "I don't rely on templates when a business needs something unique. Every project is built to solve your specific problem, not just look good.",
+      "I build everything from scratch. If you need something specific, I'll figure it out — I don't just drop you into a theme and call it done.",
     number: "01",
   },
   {
     icon: Merge,
-    title: "Content + Tech",
+    title: "I get both sides",
     description:
-      "Most people can do one or the other. I combine both — so you get a partner who understands marketing AND can actually build the thing.",
+      "I've grown an audience and shipped real software. That combo means I know what actually works, not just what looks good on a slide.",
     number: "02",
   },
   {
     icon: Clock,
-    title: "Automation Focus",
+    title: "Automation that sticks",
     description:
-      "I help businesses save time while improving customer experience. Less manual work, more consistent results, happier customers.",
+      "I set up systems that keep running after I'm gone — follow-ups, reminders, workflows. You stop doing things manually, I make sure it's reliable.",
     number: "03",
   },
   {
     icon: Layers,
-    title: "End-to-End Thinking",
+    title: "I think about the full picture",
     description:
-      "From design to deployment, content to conversions — I think about the full picture, not just my slice of it.",
+      "I don't just build what you asked for. I think about why you need it and whether there's a better way to get there.",
     number: "04",
   },
 ];
@@ -39,13 +39,10 @@ export default function WhyMe() {
     <section id="why-me" className="relative py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[#090909]" />
       <div className="absolute inset-0 grid-bg opacity-30" />
-
-      {/* Yellow glow */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FFD000]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,16 +53,14 @@ export default function WhyMe() {
               Why Work With Me
             </div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Not Just a{" "}
-              <span className="gradient-text">Developer</span>
+              Not just a developer.
               <br />
-              or a{" "}
-              <span className="gradient-text">Creator</span>
+              <span className="text-[#FFD000]">Not just a creator.</span>
             </h2>
             <p className="text-white/50 text-lg leading-relaxed mb-8">
-              I sit at the intersection of technology and marketing — which means
-              I understand what makes a business grow, not just what makes a
-              website look good.
+              Most people do one or the other. I do both — which means I
+              actually understand what you&apos;re trying to achieve, not just
+              what you asked me to build.
             </p>
             <a
               href="#contact"
@@ -75,7 +70,6 @@ export default function WhyMe() {
             </a>
           </motion.div>
 
-          {/* Right: cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {reasons.map((r, i) => (
               <motion.div
