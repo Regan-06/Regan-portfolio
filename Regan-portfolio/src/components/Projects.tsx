@@ -134,13 +134,13 @@ function SprtedMockup() {
               <img
                 src="/sprted-desktop-rajon-rondo.png"
                 alt="Desktop editing timeline for a Rajon Rondo basketball edit"
-                className="aspect-video h-full w-full object-contain"
+                className="aspect-[16/9] h-full w-full object-cover object-center"
               />
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 px-3">
+        <div className="grid grid-cols-2 gap-4 px-8">
           {[
             {
               src: "/sprted-edit-bad-guy.png",
@@ -153,12 +153,12 @@ function SprtedMockup() {
           ].map((screen) => (
             <div key={screen.src} className="group transition-all duration-300 hover:-translate-y-1">
               <div className="rounded-[1.7rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
-                <div className="relative aspect-[9/16] overflow-hidden rounded-[1.35rem] bg-black">
+                <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.35rem] bg-black">
                   <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
                   <img
                     src={screen.src}
                     alt={screen.alt}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-cover object-top"
                   />
                   <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
                   <div className="pointer-events-none absolute inset-0 rounded-[1.35rem] ring-1 ring-inset ring-white/10" />
