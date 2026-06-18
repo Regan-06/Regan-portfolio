@@ -20,6 +20,8 @@ const projects = [
     bgGradient: "from-[#FFD000]/10 via-transparent to-transparent",
     borderColor: "border-[#FFD000]/20",
     mockup: "barbervault",
+    link: "https://barbervault.co.nz",
+    linkLabel: "Visit BarberVault",
   },
   {
     id: "sprted",
@@ -37,6 +39,8 @@ const projects = [
     bgGradient: "from-purple-500/10 via-transparent to-transparent",
     borderColor: "border-purple-500/20",
     mockup: "sprted",
+    link: "https://www.tiktok.com/@sprted",
+    linkLabel: "View @sprted on TikTok",
   },
   {
     id: "sports-graphics",
@@ -54,6 +58,8 @@ const projects = [
     bgGradient: "from-blue-500/10 via-transparent to-transparent",
     borderColor: "border-blue-500/20",
     mockup: "sports",
+    link: "",
+    linkLabel: "",
   },
 ];
 
@@ -261,6 +267,18 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
+
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/75 transition-all duration-200 hover:border-white/25 hover:bg-white/10 hover:text-white"
+                    >
+                      {project.linkLabel}
+                      <ExternalLink size={14} />
+                    </a>
+                  )}
                 </div>
 
                 {/* Mockup side */}
