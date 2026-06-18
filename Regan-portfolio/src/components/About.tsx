@@ -17,7 +17,11 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative w-full aspect-square max-w-sm mx-auto md:mx-0 rounded-2xl overflow-hidden border border-white/8">
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-full aspect-square max-w-sm mx-auto md:mx-0 rounded-2xl overflow-hidden border border-white/8"
+            >
               <Image
                 src="/regan-profile.jpg"
                 alt="Regan"
@@ -26,7 +30,7 @@ export default function About() {
                 sizes="(max-width: 768px) 100vw, 384px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#090909]/60 to-transparent" />
-            </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
