@@ -19,7 +19,7 @@ export default function About() {
           >
             <div className="relative w-full aspect-square max-w-sm mx-auto md:mx-0 rounded-2xl overflow-hidden border border-white/8">
               <Image
-                src="/sprted-pfp.jpg"
+                src="/regan-profile.jpg"
                 alt="Regan"
                 fill
                 className="object-cover"
@@ -57,9 +57,9 @@ export default function About() {
 
             <div className="space-y-4 text-white/55 text-base leading-relaxed">
               <p>
-                I&apos;m 19, based in the UK, and I&apos;ve been building things
-                online for a few years now. I started out creating sports content
-                &mdash; grew{" "}
+                I&apos;m 19, based in New Zealand, and I&apos;ve been building
+                things online for a few years now. I started out creating sports
+                content &mdash; grew{" "}
                 <span className="text-white/80 font-medium">
                   SPRTED to 10K+ followers on TikTok
                 </span>{" "}
