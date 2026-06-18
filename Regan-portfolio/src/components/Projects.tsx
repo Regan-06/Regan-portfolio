@@ -127,18 +127,18 @@ function SprtedMockup() {
             <img
               src="/sprted-desktop-rajon-rondo.png"
               alt="Desktop editing timeline for a Rajon Rondo basketball edit"
-              className="aspect-video h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              className="aspect-video h-full w-full object-contain"
             />
           </div>
         </div>
 
-        <div className="group mx-auto w-[62%] min-w-[160px] transition-all duration-300 hover:-translate-y-1">
+        <div className="group mx-auto w-[48%] min-w-[140px] transition-all duration-300 hover:-translate-y-1">
           <div className="relative aspect-[9/16] overflow-hidden rounded-[1.7rem] bg-black shadow-2xl shadow-black/55 ring-1 ring-white/10">
             <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
             <img
               src="/sprted-edit-nuggets.png"
               alt="Mobile edit timeline for Denver Nuggets basketball graphic"
-              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              className="h-full w-full object-contain"
             />
             <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
             <div className="pointer-events-none absolute inset-0 rounded-[1.7rem] ring-1 ring-inset ring-white/10" />
@@ -292,7 +292,7 @@ export default function Projects() {
 
                 {/* Mockup side */}
                 <div className="p-6 lg:p-8 flex items-center justify-center min-h-[280px] lg:min-h-[400px]">
-                  <div className={`w-full ${project.id === "sprted" ? "max-w-md" : "max-w-sm"}`}>
+                  <div className={`w-full ${project.id === "sprted" ? "max-w-lg" : "max-w-sm"}`}>
                     <ProjectMockup type={project.mockup} />
                   </div>
                 </div>
