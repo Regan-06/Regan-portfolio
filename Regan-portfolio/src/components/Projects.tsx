@@ -60,10 +60,9 @@ const projects = [
 function BarberVaultMockup() {
   return (
     <div className="w-full h-full bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/10 p-4">
-      {/* Header bar */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-        <img src="/barbervault-logo.png" alt="BarberVault" className="w-5 h-5 object-contain" />
+          <img src="/barbervault-logo.png" alt="BarberVault" className="w-5 h-5 object-contain" />
           <span className="text-[#FFD000] text-xs font-bold">BarberVault</span>
         </div>
         <div className="flex gap-1.5">
@@ -72,41 +71,39 @@ function BarberVaultMockup() {
           <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
         </div>
       </div>
-      {/* Stats row */}
-      <div className="grid grid-cols-3 gap-2 mb-4">
-        {["Bookings", "Revenue", "Clients"].map((label, i) => (
-          <div key={label} className="bg-white/5 rounded-lg p-3">
-            <div className="text-[10px] text-white/40 mb-1">{label}</div>
-            <div className="text-sm font-bold text-white">
-              {i === 0 ? "48" : i === 1 ? "$2.4k" : "312"}
+
+      <div className="space-y-3">
+        {[
+          {
+            src: "/barbervault-clients.png",
+            alt: "BarberVault clients management screen",
+          },
+          {
+            src: "/barbervault-analytics.png",
+            alt: "BarberVault shop analytics dashboard",
+          },
+        ].map((screen) => (
+          <div
+            key={screen.src}
+            className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40"
+          >
+            <div className="mb-1.5 flex items-center gap-1.5 px-1">
+              <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
+              <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
+              <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
+              <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
+            </div>
+            <div className="overflow-hidden rounded-md bg-black">
+              <img
+                src={screen.src}
+                alt={screen.alt}
+                className="aspect-video h-full w-full object-cover object-top"
+              />
             </div>
           </div>
         ))}
       </div>
-      {/* Chart placeholder */}
-      <div className="bg-white/5 rounded-lg p-3 mb-3">
-        <div className="text-[10px] text-white/40 mb-2">Weekly bookings</div>
-        <div className="flex items-end gap-1 h-10">
-          {[40, 65, 50, 80, 70, 90, 75].map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-sm bg-[#FFD000]/60"
-              style={{ height: `${h}%` }}
-            />
-          ))}
         </div>
-      </div>
-      {/* Recent clients */}
-      <div className="space-y-2">
-        {["James R.", "Marcus T.", "Devon K."].map((name) => (
-          <div key={name} className="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
-            <div className="w-5 h-5 rounded-full bg-[#FFD000]/20 flex-shrink-0" />
-            <span className="text-[10px] text-white/60">{name}</span>
-            <div className="ml-auto text-[10px] text-[#FFD000]">Booked</div>
-          </div>
-        ))}
-      </div>
-    </div>
   );
 }
 
