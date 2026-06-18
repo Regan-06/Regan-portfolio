@@ -326,7 +326,7 @@ export default function Projects() {
 
                 {/* Mockup side */}
                 <div className="p-6 lg:p-8 flex items-center justify-center min-h-[280px] lg:min-h-[400px]">
-                  <div className={`w-full ${project.id === "sprted" ? "max-w-lg" : "max-w-sm"}`}>
+                  <div className={`w-full ${project.id === "sprted" || project.id === "barbervault" ? "max-w-lg" : "max-w-sm"}`}>
                     <ProjectMockup type={project.mockup} />
                   </div>
                 </div>
