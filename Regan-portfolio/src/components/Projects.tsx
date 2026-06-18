@@ -72,38 +72,22 @@ function BarberVaultMockup() {
         </div>
       </div>
 
-      <div className="space-y-3">
-        {[
-          {
-            src: "/barbervault-clients.png",
-            alt: "BarberVault clients management screen",
-          },
-          {
-            src: "/barbervault-analytics.png",
-            alt: "BarberVault shop analytics dashboard",
-          },
-        ].map((screen) => (
-          <div
-            key={screen.src}
-            className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40"
-          >
-            <div className="mb-1.5 flex items-center gap-1.5 px-1">
-              <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
-              <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
-              <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
-              <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
-            </div>
-            <div className="overflow-hidden rounded-md bg-black">
-              <img
-                src={screen.src}
-                alt={screen.alt}
-                className="aspect-video h-full w-full object-cover object-top"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
+        <div className="mb-1.5 flex items-center gap-1.5 px-1">
+          <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
+          <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
+          <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
+          <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
         </div>
+        <div className="overflow-hidden rounded-md bg-black">
+          <img
+            src="/barbervault-analytics.png"
+            alt="BarberVault shop analytics dashboard"
+            className="aspect-video h-full w-full object-cover object-top"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -123,61 +107,29 @@ function SprtedMockup() {
         </div>
       </div>
 
-      <div className="space-y-3">
-        <div className="grid grid-cols-2 gap-3">
-          {[
-            {
-              src: "/sprted-desktop-rajon-rondo.png",
-              alt: "Desktop editing timeline for a Rajon Rondo basketball edit",
-            },
-            {
-              src: "/sprted-desktop-jalen-brunson.png",
-              alt: "Desktop editing timeline for a Jalen Brunson basketball edit",
-            },
-          ].map((edit) => (
-            <div
-              key={edit.src}
-              className="rounded-lg border border-white/10 bg-[#17171a] p-1.5 shadow-xl shadow-black/40"
-            >
-              <div className="overflow-hidden rounded-md bg-black">
-                <img
-                  src={edit.src}
-                  alt={edit.alt}
-                  className="aspect-video h-full w-full object-cover object-top"
-                />
-              </div>
-              <div className="mx-auto mt-1.5 h-1 w-10 rounded-full bg-white/15" />
-            </div>
-          ))}
+      <div className="grid grid-cols-1 gap-3">
+        <div className="rounded-lg border border-white/10 bg-[#17171a] p-1.5 shadow-xl shadow-black/40">
+          <div className="overflow-hidden rounded-md bg-black">
+            <img
+              src="/sprted-desktop-rajon-rondo.png"
+              alt="Desktop editing timeline for a Rajon Rondo basketball edit"
+              className="aspect-video h-full w-full object-cover object-top"
+            />
+          </div>
+          <div className="mx-auto mt-1.5 h-1 w-10 rounded-full bg-white/15" />
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-        {[
-          {
-            src: "/sprted-edit-bad-guy.png",
-            alt: "Mobile edit timeline for BAD GUY basketball video",
-          },
-          {
-            src: "/sprted-edit-nuggets.png",
-            alt: "Mobile edit timeline for Denver Nuggets basketball graphic",
-          },
-        ].map((edit) => (
-          <div
-            key={edit.src}
-            className="relative rounded-[1.6rem] border border-white/15 bg-[#17171a] p-1.5 shadow-2xl shadow-black/50"
-          >
-            <div className="relative aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-black">
-              <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
-              <img
-                src={edit.src}
-                alt={edit.alt}
-                className="h-full w-full object-cover object-top"
-              />
-              <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
-              <div className="pointer-events-none absolute inset-0 rounded-[1.25rem] ring-1 ring-inset ring-white/10" />
-            </div>
+        <div className="mx-auto w-1/2 min-w-[120px] rounded-[1.6rem] border border-white/15 bg-[#17171a] p-1.5 shadow-2xl shadow-black/50">
+          <div className="relative aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-black">
+            <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
+            <img
+              src="/sprted-edit-nuggets.png"
+              alt="Mobile edit timeline for Denver Nuggets basketball graphic"
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
+            <div className="pointer-events-none absolute inset-0 rounded-[1.25rem] ring-1 ring-inset ring-white/10" />
           </div>
-        ))}
         </div>
       </div>
     </div>
