@@ -39,12 +39,12 @@ export default function Hero() {
           {...fadeUp(0.2)}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6"
         >
-          I build websites,{" "}
-          <span className="text-[#FFD000]">content</span>
+          Websites.{" "}
+          <span className="text-[#FFD000]">Content.</span>
           <br />
-          <span className="text-white">&amp; software that</span>
+          <span className="text-white">Software.</span>
           <br />
-          <span className="text-white/90">actually work.</span>
+          <span className="text-white/90">Built by me.</span>
         </motion.h1>
 
         <motion.p
@@ -60,21 +60,13 @@ export default function Hero() {
           {...fadeUp(0.5)}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <motion.a
+          <a
             href="#contact"
-            animate={{
-              boxShadow: [
-                "0 0 0 rgba(255,208,0,0)",
-                "0 0 28px rgba(255,208,0,0.28)",
-                "0 0 0 rgba(255,208,0,0)",
-              ],
-            }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
             className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#FFD000] text-black font-semibold text-base hover:bg-[#FFE033] transition-all duration-200 hover:shadow-[0_0_30px_rgba(255,208,0,0.4)]"
           >
             Let&apos;s Work Together
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </motion.a>
+          </a>
           <a
             href="#projects"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/10 text-white/80 font-medium text-base hover:border-white/25 hover:text-white transition-all duration-200 hover:bg-white/5"
