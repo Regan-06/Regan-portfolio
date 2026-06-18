@@ -68,7 +68,11 @@ function BarberVaultMockup() {
     <div className="w-full h-full bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/10 p-4">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <img src="/barbervault-logo.png" alt="BarberVault" className="w-5 h-5 object-contain" />
+          <img
+            src="/barbervault-glow-logo.png"
+            alt="BarberVault"
+            className="h-10 w-10 object-cover object-center"
+          />
           <span className="text-[#FFD000] text-xs font-bold">BarberVault</span>
         </div>
         <div className="flex gap-1.5">
@@ -261,8 +265,15 @@ export default function Projects() {
                     {project.label}
                   </div>
 
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                    {project.title}
+                  <h3 className="flex items-center gap-3 text-3xl md:text-4xl font-bold mb-4">
+                    {project.id === "barbervault" && (
+                      <img
+                        src="/barbervault-glow-logo.png"
+                        alt=""
+                        className="h-12 w-12 rounded-xl object-cover object-center"
+                      />
+                    )}
+                    <span>{project.title}</span>
                   </h3>
                   <p className="text-white/55 leading-relaxed mb-8 text-sm md:text-base">
                     {project.description}
