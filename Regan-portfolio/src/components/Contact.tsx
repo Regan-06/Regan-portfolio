@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send, Mail, Twitter, Instagram, CheckCircle2 } from "lucide-react";
+import { Send, Mail, Linkedin, CheckCircle2 } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -147,36 +147,6 @@ export default function Contact() {
               <p className="text-white/45 text-sm">reganmant06@gmail.com</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0f0f0f] border border-white/8">
-              <h3 className="font-semibold mb-4">Find me online</h3>
-              <div className="flex flex-col gap-3">
-                {[
-                  {
-                    icon: Twitter,
-                    label: "Twitter / X",
-                    handle: "@reganmant",
-                    color: "text-sky-400",
-                  },
-                  {
-                    icon: Instagram,
-                    label: "Instagram",
-                    handle: "@reganmant",
-                    color: "text-pink-400",
-                  },
-                ].map((s) => (
-                  <div key={s.label} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
-                      <s.icon className={`w-3.5 h-3.5 ${s.color}`} />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/40">{s.label}</div>
-                      <div className="text-sm text-white/70">{s.handle}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="p-6 rounded-2xl border border-[#FFD000]/20 bg-[#FFD000]/5">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-2 h-2 rounded-full bg-[#FFD000] animate-pulse" />
@@ -189,6 +159,16 @@ export default function Contact() {
                 24 hours.
               </p>
             </div>
+
+            <a
+              href="https://www.linkedin.com/in/regan-mant-071425345/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 p-4 rounded-xl border border-white/10 bg-[#0f0f0f] text-sm font-semibold text-white/70 transition-colors hover:border-[#FFD000]/30 hover:text-[#FFD000]"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a>
           </motion.div>
         </div>
       </div>
