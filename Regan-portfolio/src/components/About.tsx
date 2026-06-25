@@ -62,13 +62,13 @@ export default function About() {
             <div className="space-y-4 text-white/55 text-base leading-relaxed">
               <p>
                 I&apos;m a 19-year-old developer and content creator based in
-                New Zealand. I got started by building SPRTED, a basketball
-                content page that I grew to{" "}
+                New Zealand. I first started editing highlights from social
+                basketball games with my mates. That grew into SPRTED, where I
+                created fast-paced NBA and NRL content and built the page to{" "}
                 <span className="text-white/80 font-medium">
                   10K+ followers on TikTok
                 </span>{" "}
-                through consistent posting, video editing, and learning what
-                makes people stop scrolling.
+                by testing what catches attention and performs well.
               </p>
               <p>
                 BarberVault started after I visited the barbershop where a mate

@@ -28,12 +28,12 @@ const projects = [
     label: "Content Brand",
     title: "SPRTED",
     description:
-      "A sports content brand focused on NBA edits and short-form content. Built an engaged audience from zero through high-quality video editing, storytelling, and consistent posting. It proves the value of great content and platform strategy.",
+      "SPRTED grew from my interest in social media and content creation. I started by editing highlights from social basketball games with my mates, experimenting with fast pacing, eye-catching transitions, and different ways to hold attention. That led me to create SPRTED, where I posted NBA and NRL content, studied what performed best, and grew the page to more than 10,000 TikTok followers.",
     tags: ["Video Editing", "TikTok", "Content Strategy", "Growth"],
     highlights: [
       { icon: Users, text: "10,000+ TikTok followers" },
-      { icon: Play, text: "NBA short-form edits" },
-      { icon: BarChart3, text: "Organic social growth" },
+      { icon: Play, text: "Fast-paced NBA and NRL edits" },
+      { icon: BarChart3, text: "Content testing and organic growth" },
     ],
     accentColor: "#a855f7",
     bgGradient: "from-purple-500/10 via-transparent to-transparent",
