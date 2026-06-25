@@ -34,9 +34,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="display-font text-xl font-bold">
-          <span className="text-white">REGAN</span>
-          <span className="text-[#FFD000]">_MANT</span>
+        <a href="#" className="font-bold text-lg tracking-tight">
+          <span className="text-white">Regan</span>
+          <span className="text-[#FFD000]">.</span>
         </a>
 
         {/* Desktop nav */}
