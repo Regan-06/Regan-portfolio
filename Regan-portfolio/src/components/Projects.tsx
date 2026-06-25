@@ -6,15 +6,15 @@ import { ExternalLink, Users, BarChart3, Scissors, Play, Palette } from "lucide-
 const projects = [
   {
     id: "barbervault",
-    label: "SaaS Platform",
+    label: "Shop Software",
     title: "BarberVault",
     description:
-      "A custom software platform built specifically for barbershops. BarberVault combines booking management, client profiles, customer history, real-time analytics, automated email workflows, and complete business management tools into one cohesive system.",
+      "BarberVault began after I visited a barbershop where a mate works and looked for tools that could make the shop easier to run. I built those ideas into a working platform with automated follow-ups, a digital queue, detailed client records, saved cut notes and images, and analytics that show where the shop's money is coming from. The software is available for the shop to use today.",
     tags: ["Next.js", "TypeScript", "Automation", "SaaS"],
     highlights: [
-      { icon: BarChart3, text: "Real-time analytics dashboard" },
-      { icon: Users, text: "Client profiles & history" },
-      { icon: Scissors, text: "Online booking system" },
+      { icon: BarChart3, text: "Detailed revenue and shop analytics" },
+      { icon: Users, text: "Client cut notes, history, and images" },
+      { icon: Scissors, text: "Digital queue and automated follow-ups" },
     ],
     accentColor: "#FFD000",
     bgGradient: "from-[#FFD000]/10 via-transparent to-transparent",
