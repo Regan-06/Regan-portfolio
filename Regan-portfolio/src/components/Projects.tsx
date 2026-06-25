@@ -273,11 +273,11 @@ export default function Projects() {
 
                   <h3 className="display-font flex items-center gap-3 text-4xl md:text-5xl font-bold mb-4">
                     {project.id === "barbervault" && (
-                      <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden">
+                      <span className="flex h-16 w-20 flex-shrink-0 items-center justify-center overflow-hidden">
                         <img
                           src="/barbervault-glow-logo.png"
                           alt=""
-                          className="h-full w-full scale-[3.2] object-cover object-center"
+                          className="h-16 w-16 scale-[2.6] object-cover object-center"
                         />
                       </span>
                     )}
