@@ -55,7 +55,7 @@ const services = [
     icon: Code2,
     title: "Custom Software",
     description:
-      "Tailor-built tools and platforms that solve real business problems — no generic templates.",
+      "Tailor-built tools and platforms that solve real business problems without generic templates.",
     features: [
       "Booking systems",
       "Client management systems",
@@ -103,8 +103,8 @@ export default function Services() {
             <span className="gradient-text">Real Results</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
-            Everything a growing service business needs — websites, content,
-            automation, and software — under one roof.
+            Everything a growing service business needs, including websites,
+            content, automation, and software, under one roof.
           </p>
         </motion.div>
 

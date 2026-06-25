@@ -28,7 +28,7 @@ const projects = [
     label: "Content Brand",
     title: "SPRTED",
     description:
-      "A sports content brand focused on NBA edits and short-form content. Built an engaged audience from zero through high-quality video editing, storytelling, and consistent posting — proving the value of great content and platform strategy.",
+      "A sports content brand focused on NBA edits and short-form content. Built an engaged audience from zero through high-quality video editing, storytelling, and consistent posting. It proves the value of great content and platform strategy.",
     tags: ["Video Editing", "TikTok", "Content Strategy", "Growth"],
     highlights: [
       { icon: Users, text: "10,000+ TikTok followers" },

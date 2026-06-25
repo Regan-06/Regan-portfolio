@@ -8,7 +8,7 @@ const reasons = [
     icon: Target,
     title: "No templates",
     description:
-      "I build everything from scratch. If you need something specific, I'll figure it out — I don't just drop you into a theme and call it done.",
+      "I build everything from scratch. If you need something specific, I'll figure it out. I don't just drop you into a theme and call it done.",
     number: "01",
   },
   {
@@ -22,7 +22,7 @@ const reasons = [
     icon: Clock,
     title: "Automation that sticks",
     description:
-      "I set up systems that keep running after I'm gone — follow-ups, reminders, workflows. You stop doing things manually, I make sure it's reliable.",
+      "I set up systems that keep running after I'm gone, including follow-ups, reminders, and workflows. You stop doing things manually, and I make sure it's reliable.",
     number: "03",
   },
   {
@@ -58,7 +58,7 @@ export default function WhyMe() {
               <span className="text-[#FFD000]">Not just a creator.</span>
             </h2>
             <p className="text-white/50 text-lg leading-relaxed mb-8">
-              Most people do one or the other. I do both — which means I
+              Most people do one or the other. I do both, which means I
               actually understand what you&apos;re trying to achieve, not just
               what you asked me to build.
             </p>

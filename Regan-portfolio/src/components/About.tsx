@@ -63,7 +63,7 @@ export default function About() {
               <p>
                 I&apos;m 19, based in New Zealand, and I&apos;ve been building
                 things online for a few years now. I started out creating sports
-                content &mdash; grew{" "}
+                content and grew{" "}
                 <span className="text-white/80 font-medium">
                   SPRTED to 10K+ followers on TikTok
                 </span>{" "}
@@ -72,13 +72,13 @@ export default function About() {
               </p>
               <p>
                 Along the way I picked up web dev, and eventually started
-                building proper software &mdash; BarberVault being the biggest
-                one so far. A full booking and client management system built
+                building proper software. BarberVault is the biggest one so
+                far, a full booking and client management system built
                 from scratch for barbers.
               </p>
               <p>
                 Now I put both together. I help businesses get online, look
-                good, and run smoother &mdash; without the agency markup or the
+                good, and run smoother without the agency markup or the
                 week-long email chains.
               </p>
             </div>
