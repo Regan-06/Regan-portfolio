@@ -71,7 +71,7 @@ function BarberVaultMockup() {
           <img
             src="/barbervault-glow-logo.png"
             alt="BarberVault"
-            className="h-10 w-10 object-cover object-center"
+            className="h-12 w-12 object-cover object-center"
           />
           <span className="text-[#FFD000] text-xs font-bold">BarberVault</span>
         </div>
@@ -276,7 +276,7 @@ export default function Projects() {
                       <img
                         src="/barbervault-glow-logo.png"
                         alt=""
-                        className="h-12 w-12 rounded-xl object-cover object-center"
+                        className="h-14 w-14 rounded-xl object-cover object-center"
                       />
                     )}
                     <span>{project.title}</span>
