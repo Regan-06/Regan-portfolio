@@ -71,15 +71,17 @@ export default function About() {
                 makes people stop scrolling.
               </p>
               <p>
-                That experience led me into web development and software. My
-                biggest project is BarberVault, a booking and client management
-                platform I built for barbershops.
+                BarberVault started after I visited the barbershop where a mate
+                of mine works. I looked at how the shop operated and started
+                thinking about tools that could genuinely help, including
+                follow-up emails, a digital queue, saved notes and photos from
+                previous cuts, and clearer shop analytics.
               </p>
               <p>
-                Today, I combine both skill sets to build websites, content, and
-                practical software for businesses. I work directly with clients,
-                keep communication straightforward, and focus on making things
-                that are genuinely useful.
+                I turned those ideas into a working platform that is available
+                for the shop to use today. That is how I approach projects: learn
+                how a business actually works, find useful problems to solve,
+                then build around them.
               </p>
             </div>
 
