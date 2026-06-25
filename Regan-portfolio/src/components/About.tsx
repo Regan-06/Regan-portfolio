@@ -61,25 +61,25 @@ export default function About() {
 
             <div className="space-y-4 text-white/55 text-base leading-relaxed">
               <p>
-                I&apos;m 19, based in New Zealand, and I&apos;ve been building
-                things online for a few years now. I started out creating sports
-                content and grew{" "}
+                I&apos;m a 19-year-old developer and content creator based in
+                New Zealand. I got started by building SPRTED, a basketball
+                content page that I grew to{" "}
                 <span className="text-white/80 font-medium">
-                  SPRTED to 10K+ followers on TikTok
+                  10K+ followers on TikTok
                 </span>{" "}
-                just from posting consistently and figuring out what actually
-                gets views.
+                through consistent posting, video editing, and learning what
+                makes people stop scrolling.
               </p>
               <p>
-                Along the way I picked up web dev, and eventually started
-                building proper software. BarberVault is the biggest one so
-                far, a full booking and client management system built
-                from scratch for barbers.
+                That experience led me into web development and software. My
+                biggest project is BarberVault, a booking and client management
+                platform I built for barbershops.
               </p>
               <p>
-                Now I put both together. I help businesses get online, look
-                good, and run smoother without the agency markup or the
-                week-long email chains.
+                Today, I combine both skill sets to build websites, content, and
+                practical software for businesses. I work directly with clients,
+                keep communication straightforward, and focus on making things
+                that are genuinely useful.
               </p>
             </div>
 
