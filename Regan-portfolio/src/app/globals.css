@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --yellow: #FFD000;
   --yellow-light: #FFE033;
+  --cyan: #23D5E8;
   --bg: #080808;
   --surface: #0f0f0f;
   --surface-2: #161616;
@@ -32,6 +33,18 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.display-font {
+  font-family: 'Barlow Condensed', 'Inter', system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
@@ -55,7 +68,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #FFD000 0%, #FFE680 50%, #FFD000 100%);
+  background: linear-gradient(90deg, #FFD000 0%, #FFE680 65%, #23D5E8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -69,7 +82,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 /* Glow effects */
@@ -83,19 +96,77 @@ body {
 
 /* Card hover */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,208,0,0.08);
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 0 rgba(35,213,232,0.08);
   border-color: rgba(255,208,0,0.3);
 }
 
 /* Grid background */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.studio-panel {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.studio-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-rule {
+  position: relative;
+  height: 28px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.3) 0,
+    rgba(255,255,255,0.3) 1px,
+    transparent 1px,
+    transparent 32px
+  );
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+}
+
+.timeline-rule::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: 0;
+  left: 37%;
+  width: 2px;
+  background: var(--yellow);
+  box-shadow: 0 0 14px rgba(255,208,0,0.5);
+}
+
+.corner-marks {
+  background:
+    linear-gradient(var(--cyan), var(--cyan)) left top / 18px 1px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) left top / 1px 18px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right bottom / 18px 1px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right bottom / 1px 18px no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -224,17 +224,19 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 grid gap-5 border-b border-white/10 pb-8 md:grid-cols-[auto_1fr] md:items-end"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FFD000]/20 bg-[#FFD000]/5 text-[#FFD000] text-xs font-semibold uppercase tracking-wider mb-5">
-            Featured Work
+          <div className="studio-label w-fit border border-[#FFD000]/30 bg-[#FFD000]/5 px-3 py-2 text-[10px] font-semibold text-[#FFD000]">
+            02 / Featured Work
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Built by me</span>
-          </h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">
-            Real products and results across software, content, and design.
-          </p>
+          <div className="md:text-right">
+            <h2 className="display-font text-5xl md:text-7xl font-bold leading-none">
+              <span className="gradient-text">Built by me</span>
+            </h2>
+            <p className="mt-3 text-white/45">
+              Real products and results across software, content, and design.
+            </p>
+          </div>
         </motion.div>
 
         <div className="space-y-8">
@@ -245,7 +247,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.65, delay: i * 0.1 }}
-              className={`relative rounded-2xl border ${project.borderColor} bg-[#0f0f0f] overflow-hidden card-hover`}
+              className={`studio-panel relative border ${project.borderColor} bg-[#0f0f0f] overflow-hidden card-hover`}
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${project.bgGradient} pointer-events-none`}
@@ -253,9 +255,13 @@ export default function Projects() {
 
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0">
                 {/* Text side */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="p-8 lg:p-12 flex flex-col justify-center border-b border-white/5 lg:border-b-0 lg:border-r">
+                  <div className="studio-label mb-6 flex items-center justify-between text-[9px] text-white/25">
+                    <span>PROJECT / 0{i + 1}</span>
+                    <span>{project.id.toUpperCase()}</span>
+                  </div>
                   <div
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-semibold uppercase tracking-wider mb-5 w-fit"
+                    className="studio-label inline-flex items-center gap-2 px-3 py-1.5 border text-[9px] font-semibold mb-5 w-fit"
                     style={{
                       borderColor: project.accentColor + "40",
                       color: project.accentColor,
@@ -265,7 +271,7 @@ export default function Projects() {
                     {project.label}
                   </div>
 
-                  <h3 className="flex items-center gap-3 text-3xl md:text-4xl font-bold mb-4">
+                  <h3 className="display-font flex items-center gap-3 text-4xl md:text-5xl font-bold mb-4">
                     {project.id === "barbervault" && (
                       <img
                         src="/barbervault-glow-logo.png"
@@ -302,7 +308,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full text-xs text-white/50 border border-white/8 bg-white/5"
+                        className="studio-label px-3 py-1.5 text-[9px] text-white/50 border border-white/10 bg-white/[0.03]"
                       >
                         {tag}
                       </span>
@@ -316,7 +322,7 @@ export default function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/75 transition-all duration-200 hover:border-white/25 hover:bg-white/10 hover:text-white"
+                      className="studio-label mt-6 inline-flex w-fit items-center gap-2 border border-white/15 bg-white/[0.03] px-4 py-3 text-[10px] font-medium text-white/75 transition-all duration-200 hover:border-[#23D5E8] hover:text-[#23D5E8]"
                     >
                       {project.linkLabel}
                       <ExternalLink size={14} />
@@ -325,7 +331,7 @@ export default function Projects() {
                 </div>
 
                 {/* Mockup side */}
-                <div className="p-6 lg:p-8 flex items-center justify-center min-h-[280px] lg:min-h-[400px]">
+                <div className="corner-marks m-4 p-4 lg:m-6 lg:p-6 flex items-center justify-center min-h-[280px] lg:min-h-[400px]">
                   <div className={`w-full ${project.id === "sprted" || project.id === "barbervault" ? "max-w-lg" : "max-w-sm"}`}>
                     <ProjectMockup type={project.mockup} />
                   </div>
