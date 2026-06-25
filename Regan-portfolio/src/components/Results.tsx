@@ -18,7 +18,7 @@ const metrics = [
     suffix: "",
     prefix: "",
     label: "SaaS Platform Built",
-    description: "BarberVault — custom software built from scratch for barbershops",
+    description: "BarberVault, custom software built from scratch for barbershops",
     color: "text-[#FFD000]",
     bg: "bg-[#FFD000]/10",
     border: "border-[#FFD000]/20",
@@ -150,7 +150,7 @@ export default function Results() {
           <div className="relative z-10">
             <p className="text-xl md:text-2xl font-medium text-white/80 max-w-2xl mx-auto leading-relaxed mb-6">
               &ldquo;Whether it&apos;s a website, a video, an automation system, or a full
-              software product — I build things that actually move the needle for
+              software product. I build things that actually move the needle for
               businesses.&rdquo;
             </p>
             <div className="text-[#FFD000] font-semibold">Regan Mant</div>

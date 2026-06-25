@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Regan Mant — Websites, Content & Automation",
+  title: "Regan Mant | Websites, Content & Automation",
   description:
     "I help service businesses attract more customers, automate repetitive tasks, and build better online experiences through websites, content creation, and custom software.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "service business websites",
   ],
   openGraph: {
-    title: "Regan Mant — Websites, Content & Automation",
+    title: "Regan Mant | Websites, Content & Automation",
     description:
       "I help service businesses attract more customers, automate repetitive tasks, and build better online experiences.",
     type: "website",
