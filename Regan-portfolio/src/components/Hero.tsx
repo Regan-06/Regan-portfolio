@@ -81,7 +81,6 @@ export default function Hero() {
         >
           {[
             { value: "10K+", label: "TikTok Followers" },
-            { value: "3+", label: "SaaS Products Built" },
             { value: "100%", label: "Custom Solutions" },
           ].map((s) => (
             <div key={s.label} className="text-center">
