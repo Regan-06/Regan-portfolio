@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Why Me", href: "#why-me" },
-  { label: "Results", href: "#results" },
-  { label: "Contact", href: "#contact" },
+  { number: "01", label: "Services", href: "#services" },
+  { number: "02", label: "Projects", href: "#projects" },
+  { number: "03", label: "Why Me", href: "#why-me" },
+  { number: "04", label: "Results", href: "#results" },
+  { number: "05", label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -29,25 +29,28 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#080808]/90 backdrop-blur-xl border-b border-white/5"
+          ? "bg-[#080808]/95 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-bold text-lg tracking-tight">
-          <span className="text-white">Regan</span>
-          <span className="text-[#FFD000]">.</span>
+        <a href="#" className="display-font text-xl font-bold">
+          <span className="text-white">REGAN</span>
+          <span className="text-[#FFD000]">_MANT</span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+              className="group flex items-center gap-1.5 text-xs text-white/55 hover:text-white transition-colors duration-200"
             >
-              {l.label}
+              <span className="studio-label text-[9px] text-[#23D5E8]/60 group-hover:text-[#23D5E8]">
+                {l.number}
+              </span>
+              <span>{l.label}</span>
             </a>
           ))}
         </nav>
@@ -55,7 +58,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
-            className="text-sm px-4 py-2 rounded-lg bg-[#FFD000] text-black font-semibold hover:bg-[#FFE033] transition-colors duration-200"
+            className="studio-label text-[11px] px-4 py-2 bg-[#FFD000] text-black font-bold hover:bg-[#23D5E8] transition-colors duration-200"
           >
             Let&apos;s Work Together
           </a>
@@ -85,15 +88,16 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-white/70 hover:text-white text-sm py-1"
+                  className="flex items-center gap-3 border-b border-white/5 py-3 text-white/70 hover:text-white text-sm"
                 >
+                  <span className="studio-label text-[10px] text-[#23D5E8]">{l.number}</span>
                   {l.label}
                 </a>
               ))}
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 text-center text-sm px-4 py-2.5 rounded-lg bg-[#FFD000] text-black font-semibold"
+                className="studio-label mt-2 text-center text-xs px-4 py-3 bg-[#FFD000] text-black font-semibold"
               >
                 Let&apos;s Work Together
               </a>
