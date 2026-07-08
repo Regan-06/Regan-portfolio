@@ -126,6 +126,28 @@ function SprtedMockup() {
   return (
     <div className="w-full h-full">
       <div className="grid grid-cols-1 gap-4">
+        {/* Intro video */}
+        <div className="group transition-all duration-300 hover:-translate-y-1">
+          <div className="rounded-xl bg-[#121214] p-2 shadow-2xl shadow-black/50 ring-1 ring-white/10">
+            <div className="mb-2 flex items-center gap-1.5 px-1">
+              <span className="h-2 w-2 rounded-full bg-red-400/60" />
+              <span className="h-2 w-2 rounded-full bg-yellow-400/60" />
+              <span className="h-2 w-2 rounded-full bg-green-400/60" />
+              <span className="ml-auto h-1.5 w-20 rounded-full bg-white/10" />
+            </div>
+            <div className="overflow-hidden rounded-lg bg-black">
+              <video
+                src="/sprted-intro.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="aspect-[16/9] h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="group transition-all duration-300 hover:-translate-y-1">
           <div className="rounded-xl bg-[#121214] p-2 shadow-2xl shadow-black/50 ring-1 ring-white/10">
             <div className="mb-2 flex items-center gap-1.5 px-1">
