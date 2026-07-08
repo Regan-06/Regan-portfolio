@@ -214,7 +214,7 @@ function ProjectMockup({ type }: { type: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-32 px-6 overflow-hidden">
+    <section id="projects" className="relative py-16 md:py-32 px-4 md:px-6 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] to-[#0a0a0a]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFD000]/4 rounded-full blur-[100px] pointer-events-none" />
 
@@ -230,7 +230,7 @@ export default function Projects() {
             02 / Featured Work
           </div>
           <div className="md:text-right">
-            <h2 className="display-font text-5xl md:text-7xl font-bold leading-none">
+            <h2 className="display-font text-4xl sm:text-5xl md:text-7xl font-bold leading-none">
               <span className="gradient-text">Built by me</span>
             </h2>
             <p className="mt-3 text-white/45">
@@ -271,17 +271,17 @@ export default function Projects() {
                     {project.label}
                   </div>
 
-                  <h3 className="display-font flex items-center gap-3 text-4xl md:text-5xl font-bold mb-4">
+                  <h3 className="display-font flex flex-wrap items-center gap-3 text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     {project.id === "barbervault" && (
-                      <span className="flex h-16 w-20 flex-shrink-0 items-center justify-center overflow-hidden">
+                      <span className="flex h-12 w-14 sm:h-16 sm:w-20 flex-shrink-0 items-center justify-center overflow-hidden">
                         <img
                           src="/barbervault-glow-logo.png"
                           alt=""
-                          className="h-16 w-16 scale-[2.6] object-cover object-center"
+                          className="h-12 w-12 sm:h-16 sm:w-16 scale-[2.6] object-cover object-center"
                         />
                       </span>
                     )}
-                    <span>{project.title}</span>
+                    <span className="min-w-0 break-words">{project.title}</span>
                   </h3>
                   <p className="text-white/55 leading-relaxed mb-8 text-sm md:text-base">
                     {project.description}
