@@ -242,27 +242,35 @@ export default function Projects() {
           <div className="studio-label w-fit border border-[#FFD000]/30 bg-[#FFD000]/5 px-3 py-2 text-[10px] font-semibold text-[#FFD000]">
             02 / Featured Work
           </div>
-          <div className="md:text-right relative">
-            <h2 className="display-font text-4xl sm:text-5xl md:text-7xl font-bold leading-none">
-              <span className="gradient-text">Built by me</span>
-            </h2>
-            <p className="mt-3 text-white/45">
-              Real products and results across software, content, and design.
-            </p>
-            {/* Pop-out photo */}
+          {/* Wrap in relative container with overflow hidden so image rises from behind */}
+          <div className="relative md:text-right overflow-hidden">
+            {/* Image behind text — z-0 */}
             <motion.div
-              initial={{ opacity: 0, y: 60, scale: 0.85 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
-              className="absolute -bottom-2 right-0 md:-bottom-4 pointer-events-none select-none"
+              initial={{ y: "100%", opacity: 0 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
+              className="absolute bottom-0 right-0 z-0 pointer-events-none select-none"
             >
               <img
                 src="/regan-builtbyme.png"
                 alt="Regan"
-                className="h-48 sm:h-60 md:h-72 w-auto object-contain drop-shadow-2xl"
+                className="h-44 sm:h-56 md:h-72 w-auto object-contain"
               />
             </motion.div>
+
+            {/* Text on top — z-10 */}
+            <div className="relative z-10">
+              <h2 className="display-font text-4xl sm:text-5xl md:text-7xl font-bold leading-none">
+                <span className="gradient-text">Built by me</span>
+              </h2>
+              <p className="mt-3 text-white/45">
+                Real products and results across software, content, and design.
+              </p>
+            </div>
+
+            {/* Spacer so image has room to show below text */}
+            <div className="h-36 sm:h-44 md:h-56" />
           </div>
         </motion.div>
 
