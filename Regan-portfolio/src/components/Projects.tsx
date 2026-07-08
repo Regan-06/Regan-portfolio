@@ -28,10 +28,10 @@ const projects = [
     label: "Content Brand",
     title: "SPRTED",
     description:
-      "SPRTED grew from my interest in social media and content creation. I started by editing highlights from social basketball games with my mates, experimenting with fast pacing, eye-catching transitions, and different ways to hold attention. That led me to create SPRTED, where I posted NBA and NRL content, studied what performed best, and grew the page to more than 10,000 TikTok followers.",
+      "SPRTED grew from my interest in social media and content creation. I started by editing highlights from social basketball games with my mates, experimenting with fast pacing, eye-catching transitions, and different ways to hold attention. That led me to create SPRTED, where I posted NBA and NRL content, studied what performed best, and grew the page to more than 10,700 TikTok followers.",
     tags: ["Video Editing", "TikTok", "Content Strategy", "Growth"],
     highlights: [
-      { icon: Users, text: "10,000+ TikTok followers" },
+      { icon: Users, text: "10.7K TikTok followers" },
       { icon: Play, text: "Fast-paced NBA and NRL edits" },
       { icon: BarChart3, text: "Content testing and organic growth" },
     ],
@@ -115,7 +115,7 @@ function SprtedProfileStrip() {
         <div className="text-sm text-white/40">Video editing</div>
       </div>
       <div className="ml-auto text-right">
-        <div className="text-2xl font-bold text-purple-400">10.2K</div>
+        <div className="text-2xl font-bold text-purple-400">10.7K</div>
         <div className="text-sm text-white/40">Followers</div>
       </div>
     </div>

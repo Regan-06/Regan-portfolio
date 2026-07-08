@@ -5,8 +5,8 @@ import { useRef, useEffect, useState } from "react";
 
 const metrics = [
   {
-    value: 10000,
-    suffix: "+",
+    value: 10700,
+    suffix: "",
     label: "TikTok Followers",
     description: "Organic growth built from zero on the SPRTED sports brand",
     color: "text-purple-400",

@@ -66,7 +66,7 @@ export default function About() {
                 basketball games with my mates. That grew into SPRTED, where I
                 created fast-paced NBA and NRL content and built the page to{" "}
                 <span className="text-white/80 font-medium">
-                  10K+ followers on TikTok
+                  10.7K followers on TikTok
                 </span>{" "}
                 by testing what catches attention and performs well.
               </p>
@@ -87,7 +87,7 @@ export default function About() {
 
             <div className="mt-8 flex gap-6 text-sm text-white/40">
               <div>
-                <div className="text-white font-semibold text-lg">10K+</div>
+                <div className="text-white font-semibold text-lg">10.7K</div>
                 <div>TikTok followers</div>
               </div>
               <div className="w-px bg-white/10" />

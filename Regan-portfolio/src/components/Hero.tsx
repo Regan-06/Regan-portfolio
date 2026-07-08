@@ -74,7 +74,7 @@ export default function Hero() {
           className="mt-14 grid grid-cols-2 border border-white/10 bg-black/30"
         >
           {[
-            { value: "10K+", label: "TikTok Followers" },
+            { value: "10.7K", label: "TikTok Followers" },
             { value: "100%", label: "Custom Solutions" },
           ].map((s) => (
             <div key={s.label} className="flex items-center gap-4 border-r border-white/10 p-4 md:p-5">
