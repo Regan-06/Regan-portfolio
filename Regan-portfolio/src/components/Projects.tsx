@@ -148,50 +148,41 @@ function SprtedMockup() {
           </div>
         </div>
 
-        <div className="group transition-all duration-300 hover:-translate-y-1">
-          <div className="rounded-xl bg-[#121214] p-2 shadow-2xl shadow-black/50 ring-1 ring-white/10">
-            <div className="mb-2 flex items-center gap-1.5 px-1">
-              <span className="h-2 w-2 rounded-full bg-red-400/60" />
-              <span className="h-2 w-2 rounded-full bg-yellow-400/60" />
-              <span className="h-2 w-2 rounded-full bg-green-400/60" />
-              <span className="ml-auto h-1.5 w-20 rounded-full bg-white/10" />
-            </div>
-            <div className="overflow-hidden rounded-lg bg-black">
-              <img
-                src="/sprted-desktop-rajon-rondo.png"
-                alt="Desktop editing timeline for a Rajon Rondo basketball edit"
-                className="aspect-[16/9] h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
-
         <div className="grid grid-cols-2 gap-4 px-8">
-          {[
-            {
-              src: "/sprted-edit-bad-guy.png",
-              alt: "Mobile edit timeline for BAD GUY basketball video",
-            },
-            {
-              src: "/sprted-edit-nuggets.png",
-              alt: "Mobile edit timeline for Denver Nuggets basketball graphic",
-            },
-          ].map((screen) => (
-            <div key={screen.src} className="group transition-all duration-300 hover:-translate-y-1">
-              <div className="rounded-[1.7rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
-                <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.35rem] bg-black">
-                  <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
-                  <img
-                    src={screen.src}
-                    alt={screen.alt}
-                    className="h-full w-full object-cover object-top"
-                  />
-                  <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
-                  <div className="pointer-events-none absolute inset-0 rounded-[1.35rem] ring-1 ring-inset ring-white/10" />
-                </div>
+          {/* Left phone — screen recording video */}
+          <div className="group transition-all duration-300 hover:-translate-y-1">
+            <div className="rounded-[1.7rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
+              <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.35rem] bg-black">
+                <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
+                <video
+                  src="/sprted-phone-edit.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover object-top"
+                />
+                <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
+                <div className="pointer-events-none absolute inset-0 rounded-[1.35rem] ring-1 ring-inset ring-white/10" />
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Right phone — static screenshot */}
+          <div className="group transition-all duration-300 hover:-translate-y-1">
+            <div className="rounded-[1.7rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
+              <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.35rem] bg-black">
+                <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
+                <img
+                  src="/sprted-edit-nuggets.png"
+                  alt="Mobile edit timeline for Denver Nuggets basketball graphic"
+                  className="h-full w-full object-cover object-top"
+                />
+                <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
+                <div className="pointer-events-none absolute inset-0 rounded-[1.35rem] ring-1 ring-inset ring-white/10" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
