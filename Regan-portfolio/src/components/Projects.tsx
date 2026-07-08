@@ -242,24 +242,21 @@ export default function Projects() {
           <div className="studio-label w-fit border border-[#FFD000]/30 bg-[#FFD000]/5 px-3 py-2 text-[10px] font-semibold text-[#FFD000]">
             02 / Featured Work
           </div>
-          {/* Wrap in relative container with overflow hidden so image rises from behind */}
-          <div className="relative md:text-right overflow-hidden">
-            {/* Image behind text — z-0 */}
-            <motion.div
-              initial={{ y: "100%", opacity: 0 }}
-              whileInView={{ y: "0%", opacity: 1 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
-              className="absolute bottom-0 right-0 z-0 pointer-events-none select-none"
-            >
-              <img
+          <div className="relative md:text-right">
+            {/* Image rises up behind the heading — clipped by overflow-hidden wrapper */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
+              <motion.img
                 src="/regan-builtbyme.png"
                 alt="Regan"
-                className="h-44 sm:h-56 md:h-72 w-auto object-contain"
+                initial={{ y: "100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
+                className="absolute bottom-0 right-0 h-full w-auto object-contain object-bottom"
               />
-            </motion.div>
+            </div>
 
-            {/* Text on top — z-10 */}
+            {/* Text on top */}
             <div className="relative z-10">
               <h2 className="display-font text-4xl sm:text-5xl md:text-7xl font-bold leading-none">
                 <span className="gradient-text">Built by me</span>
@@ -268,9 +265,6 @@ export default function Projects() {
                 Real products and results across software, content, and design.
               </p>
             </div>
-
-            {/* Spacer so image has room to show below text */}
-            <div className="h-36 sm:h-44 md:h-56" />
           </div>
         </motion.div>
 
