@@ -142,7 +142,7 @@ function SprtedMockup() {
                 loop
                 muted
                 playsInline
-                className="aspect-[4/3] h-full w-full object-contain bg-black"
+                className="aspect-[4/3] h-full w-full object-cover bg-black"
               />
             </div>
           </div>
