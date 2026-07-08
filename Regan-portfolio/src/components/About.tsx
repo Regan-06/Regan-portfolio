@@ -41,7 +41,7 @@ export default function About() {
             >
               <span className="text-[#FFD000]">Developer</span>
               <span className="text-white/40 mx-1.5">/</span>
-              <span className="text-white/80">Content Creator</span>
+              <span className="text-white/80">Video Editor</span>
             </motion.div>
           </motion.div>
 
@@ -61,7 +61,7 @@ export default function About() {
 
             <div className="space-y-4 text-white/55 text-base leading-relaxed">
               <p>
-                I&apos;m a 19-year-old developer and content creator based in
+                I&apos;m a 19-year-old developer and video editor based in
                 New Zealand. I first started editing highlights from social
                 basketball games with my mates. That grew into SPRTED, where I
                 created fast-paced NBA and NRL content and built the page to{" "}
