@@ -92,11 +92,6 @@ export default function About() {
               </div>
               <div className="w-px bg-white/10" />
               <div>
-                <div className="text-white font-semibold text-lg">3+</div>
-                <div>Projects shipped</div>
-              </div>
-              <div className="w-px bg-white/10" />
-              <div>
                 <div className="text-white font-semibold text-lg">19</div>
                 <div>Years old</div>
               </div>
