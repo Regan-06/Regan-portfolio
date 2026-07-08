@@ -227,7 +227,7 @@ function ProjectMockup({ type }: { type: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-16 md:py-32 px-4 md:px-6 overflow-hidden">
+    <section id="projects" className="relative py-16 md:py-32 px-4 md:px-6 overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] to-[#0a0a0a]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFD000]/4 rounded-full blur-[100px] pointer-events-none" />
 
