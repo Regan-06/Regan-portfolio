@@ -243,18 +243,16 @@ export default function Projects() {
             02 / Featured Work
           </div>
           <div className="relative md:text-right">
-            {/* Image rises up behind the heading — clipped by overflow-hidden wrapper */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
-              <motion.img
-                src="/regan-builtbyme.png"
-                alt="Regan"
-                initial={{ y: "100%" }}
-                whileInView={{ y: "0%" }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
-                className="absolute bottom-0 right-0 h-full w-auto object-contain object-bottom"
-              />
-            </div>
+            {/* Image pops up from below — bottom of shirt sits just below the subtitle */}
+            <motion.img
+              src="/regan-builtbyme.png"
+              alt="Regan"
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
+              className="absolute bottom-0 right-0 z-0 h-44 sm:h-56 md:h-72 w-auto object-contain object-bottom pointer-events-none select-none"
+            />
 
             {/* Text on top */}
             <div className="relative z-10">
