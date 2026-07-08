@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Play } from "lucide-react";
+import ScrambleText from "./ScrambleText";
+import MagneticButton from "./MagneticButton";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -32,10 +34,10 @@ export default function Hero() {
           {...fadeUp(0.2)}
           className="display-font text-left text-[4.2rem] sm:text-7xl md:text-8xl lg:text-[8.5rem] font-bold leading-[0.82] mb-8"
         >
-          <span className="block text-white">Websites</span>
-          <span className="block text-[#FFD000]">Content</span>
+          <span className="block text-white"><ScrambleText text="Websites" delay={200} /></span>
+          <span className="block text-[#FFD000]"><ScrambleText text="Content" delay={500} /></span>
           <span className="block text-white">
-            Software<span className="text-[#23D5E8]">.</span>
+            <ScrambleText text="Software" delay={800} /><span className="text-[#23D5E8]">.</span>
           </span>
         </motion.h1>
 
@@ -52,20 +54,24 @@ export default function Hero() {
             {...fadeUp(0.5)}
             className="flex flex-col sm:flex-row items-stretch gap-3"
           >
-            <a
-              href="#contact"
-              className="group studio-label inline-flex items-center justify-center gap-3 bg-[#FFD000] px-6 py-4 text-xs font-bold text-black transition-colors hover:bg-[#23D5E8]"
-            >
-              Start a project
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#projects"
-              className="studio-label inline-flex items-center justify-center gap-3 border border-white/15 px-6 py-4 text-xs text-white/80 transition-colors hover:border-[#23D5E8] hover:text-[#23D5E8]"
-            >
-              <Play size={14} fill="currentColor" />
-              View work
-            </a>
+            <MagneticButton>
+              <a
+                href="#contact"
+                className="group studio-label inline-flex items-center justify-center gap-3 bg-[#FFD000] px-6 py-4 text-xs font-bold text-black transition-colors hover:bg-[#23D5E8]"
+              >
+                Start a project
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a
+                href="#projects"
+                className="studio-label inline-flex items-center justify-center gap-3 border border-white/15 px-6 py-4 text-xs text-white/80 transition-colors hover:border-[#23D5E8] hover:text-[#23D5E8]"
+              >
+                <Play size={14} fill="currentColor" />
+                View work
+              </a>
+            </MagneticButton>
           </motion.div>
         </div>
 
