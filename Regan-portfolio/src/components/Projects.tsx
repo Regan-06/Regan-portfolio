@@ -137,7 +137,7 @@ function SprtedMockup() {
             </div>
             <div className="overflow-hidden rounded-lg bg-black">
               <video
-                src="/sprted-intro.mov"
+                src="/sprted-intro-capcut.mp4"
                 autoPlay
                 loop
                 muted
