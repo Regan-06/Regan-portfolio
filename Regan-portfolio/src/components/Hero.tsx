@@ -44,7 +44,7 @@ export default function Hero() {
             {...fadeUp(0.35)}
             className="max-w-2xl text-base md:text-lg text-white/55 leading-relaxed"
           >
-            I&apos;m Regan, a developer and content creator who helps businesses
+            I&apos;m Regan, a developer and video editor who helps businesses
             grow online through custom sites, video, and useful software.
           </motion.p>
 
