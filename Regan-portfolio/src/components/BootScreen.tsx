@@ -23,9 +23,9 @@ export default function BootScreen() {
       setVisibleLines(i);
       if (i >= lines.length) {
         clearInterval(interval);
-        setTimeout(() => setShowPrompt(true), 400);
+        setTimeout(() => setShowPrompt(true), 250);
       }
-    }, 600);
+    }, 380);
     return () => clearInterval(interval);
   }, []);
 
@@ -88,7 +88,7 @@ export default function BootScreen() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12 text-center"
           >
-            <h1 className="display-font text-[5rem] sm:text-[8rem] md:text-[11rem] font-bold leading-none tracking-tight text-white">
+            <h1 className="display-font text-[4rem] sm:text-[6rem] md:text-[8rem] font-bold leading-none tracking-tight text-white">
               REGAN<span className="text-[#FFD000]">.EXE</span>
             </h1>
             <p className="studio-label mt-3 text-sm sm:text-base tracking-[0.3em] text-[#FFD000]">ACCESS GRANTED</p>
