@@ -89,7 +89,7 @@ export default function BootScreen() {
             className="mb-12 text-center"
           >
             <h1 className="display-font text-[5rem] sm:text-[8rem] md:text-[11rem] font-bold leading-none tracking-tight text-white">
-              REGAN<span className="text-[#FFD000]">.</span>
+              REGAN<span className="text-[#FFD000]">.EXE</span>
             </h1>
             <p className="studio-label mt-3 text-sm sm:text-base tracking-[0.3em] text-[#FFD000]">ACCESS GRANTED</p>
           </motion.div>
