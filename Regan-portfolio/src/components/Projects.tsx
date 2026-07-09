@@ -44,6 +44,13 @@ const projects = [
   },
 ];
 
+const notifications = [
+  { icon: "✂️", title: "New booking", body: "Jake M. — Friday 2:00pm", delay: 0.2 },
+  { icon: "⭐", title: "Review request sent", body: "Marcus T. just left the chair", delay: 1.4 },
+  { icon: "👥", title: "Queue update", body: "3 clients waiting · est. 45 min", delay: 2.6 },
+  { icon: "💰", title: "Revenue milestone", body: "This week: $1,240 · up 18%", delay: 3.8 },
+];
+
 function BarberVaultMockup() {
   return (
     <div className="w-full h-full bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/10 p-4">
@@ -63,7 +70,8 @@ function BarberVaultMockup() {
         </div>
       </div>
 
-      <div className="group rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD000]/45 hover:shadow-[#FFD000]/10">
+      {/* Browser mockup */}
+      <div className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
         <div className="mb-1.5 flex items-center gap-1.5 px-1">
           <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
           <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
@@ -74,9 +82,30 @@ function BarberVaultMockup() {
           <img
             src="/barbervault-analytics.png"
             alt="BarberVault shop analytics dashboard"
-            className="aspect-video h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+            className="aspect-video h-full w-full object-cover object-top"
           />
         </div>
+      </div>
+
+      {/* Notification stack */}
+      <div className="mt-3 space-y-2">
+        {notifications.map((n) => (
+          <motion.div
+            key={n.title}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.45, ease: "easeOut", delay: n.delay }}
+            className="flex items-center gap-3 rounded-lg border border-white/8 bg-[#111] px-3 py-2.5"
+          >
+            <span className="text-base leading-none">{n.icon}</span>
+            <div className="min-w-0 flex-1">
+              <div className="text-[11px] font-semibold text-white/90 leading-tight">{n.title}</div>
+              <div className="text-[10px] text-white/40 leading-tight mt-0.5 truncate">{n.body}</div>
+            </div>
+            <div className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#FFD000]" />
+          </motion.div>
+        ))}
       </div>
     </div>
   );
