@@ -70,22 +70,43 @@ function BarberVaultMockup() {
         </div>
       </div>
 
-      {/* Browser mockup */}
-      <div className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
-        <div className="mb-1.5 flex items-center gap-1.5 px-1">
-          <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
-          <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
-          <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
-          <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
+      {/* Browser + phone side by side */}
+      <div className="flex gap-3 items-start">
+        {/* Browser mockup */}
+        <div className="flex-1 rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
+          <div className="mb-1.5 flex items-center gap-1.5 px-1">
+            <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
+            <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
+            <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
+            <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
+          </div>
+          <div className="overflow-hidden rounded-md bg-black">
+            <video
+              src="/barbervault-demo.mp4"
+              autoPlay
+              muted
+              playsInline
+              className="aspect-video h-full w-full object-cover object-top"
+            />
+          </div>
         </div>
-        <div className="overflow-hidden rounded-md bg-black">
-          <video
-            src="/barbervault-demo.mp4"
-            autoPlay
-            muted
-            playsInline
-            className="aspect-video h-full w-full object-cover object-top"
-          />
+
+        {/* Phone mockup */}
+        <div className="w-[72px] flex-shrink-0">
+          <div className="rounded-[1.1rem] bg-[#111114] p-1 shadow-2xl shadow-black/55 ring-1 ring-white/12">
+            <div className="relative aspect-[9/18.5] overflow-hidden rounded-[0.85rem] bg-black">
+              <div className="absolute left-1/2 top-1 z-10 h-2 w-7 -translate-x-1/2 rounded-full bg-black/90" />
+              <video
+                src="/barbervault-phone.mp4"
+                autoPlay
+                muted
+                playsInline
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-x-4 bottom-1 h-0.5 rounded-full bg-white/70" />
+              <div className="pointer-events-none absolute inset-0 rounded-[0.85rem] ring-1 ring-inset ring-white/10" />
+            </div>
+          </div>
         </div>
       </div>
 
