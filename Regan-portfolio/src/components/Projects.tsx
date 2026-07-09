@@ -79,9 +79,11 @@ function BarberVaultMockup() {
           <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
         </div>
         <div className="overflow-hidden rounded-md bg-black">
-          <img
-            src="/barbervault-analytics.png"
-            alt="BarberVault shop analytics dashboard"
+          <video
+            src="/barbervault-demo.mp4"
+            autoPlay
+            muted
+            playsInline
             className="aspect-video h-full w-full object-cover object-top"
           />
         </div>
