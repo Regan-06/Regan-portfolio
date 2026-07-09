@@ -65,28 +65,31 @@ export default function BootScreen() {
           />
 
           {/* Corner marks */}
-          <div className="absolute top-6 left-6 w-6 h-6 border-t border-l border-[#23D5E8]/40" />
-          <div className="absolute top-6 right-6 w-6 h-6 border-t border-r border-[#23D5E8]/40" />
-          <div className="absolute bottom-6 left-6 w-6 h-6 border-b border-l border-[#23D5E8]/40" />
-          <div className="absolute bottom-6 right-6 w-6 h-6 border-b border-r border-[#23D5E8]/40" />
+          <div className="absolute top-6 left-6 w-6 h-6 border-t border-l border-white/20" />
+          <div className="absolute top-6 right-6 w-6 h-6 border-t border-r border-white/20" />
+          <div className="absolute bottom-6 left-6 w-6 h-6 border-b border-l border-white/20" />
+          <div className="absolute bottom-6 right-6 w-6 h-6 border-b border-r border-white/20" />
 
-          {/* Logo */}
+          {/* Top-left logo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="absolute top-6 left-8 font-bold text-lg tracking-tight"
+          >
+            <span className="text-white">Regan</span>
+            <span className="text-[#FFD000]">.</span>
+          </motion.div>
+
+          {/* Large centred logo */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12 text-center"
           >
-            <h1
-              className="display-font text-[5rem] sm:text-[8rem] md:text-[11rem] font-bold leading-none tracking-tight"
-              style={{
-                background: "linear-gradient(90deg, #FFD000 0%, #FFE680 65%, #23D5E8 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              REGAN<span style={{ WebkitTextFillColor: "#23D5E8" }}>.</span>
+            <h1 className="display-font text-[5rem] sm:text-[8rem] md:text-[11rem] font-bold leading-none tracking-tight text-white">
+              REGAN<span className="text-[#FFD000]">.</span>
             </h1>
           </motion.div>
 
