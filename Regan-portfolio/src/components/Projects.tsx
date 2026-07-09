@@ -70,29 +70,29 @@ function BarberVaultMockup() {
         </div>
       </div>
 
-      {/* Browser + phone side by side */}
-      <div className="flex gap-3 items-end">
-        {/* Browser mockup */}
-        <div className="flex-[3] rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
-          <div className="mb-1.5 flex items-center gap-1.5 px-1">
-            <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
-            <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
-            <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
-            <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
-          </div>
-          <div className="overflow-hidden rounded-md bg-black">
-            <video
-              src="/barbervault-demo.mp4"
-              autoPlay
-              muted
-              playsInline
-              className="aspect-video h-full w-full object-cover object-top"
-            />
-          </div>
+      {/* Browser — full width */}
+      <div className="rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
+        <div className="mb-1.5 flex items-center gap-1.5 px-1">
+          <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
+          <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
+          <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
+          <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
         </div>
+        <div className="overflow-hidden rounded-md bg-black">
+          <video
+            src="/barbervault-demo.mp4"
+            autoPlay
+            muted
+            playsInline
+            className="aspect-video h-full w-full object-cover object-top"
+          />
+        </div>
+      </div>
 
+      {/* Phone + notifications side by side on mobile, phone standalone on desktop */}
+      <div className="mt-3 flex gap-3 items-start">
         {/* Phone mockup */}
-        <div className="w-[110px] flex-shrink-0">
+        <div className="w-[90px] sm:w-[110px] flex-shrink-0">
           <div className="rounded-[1.4rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
             <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.1rem] bg-black">
               <div className="absolute left-1/2 top-1.5 z-10 h-2.5 w-10 -translate-x-1/2 rounded-full bg-black/90" />
@@ -108,27 +108,27 @@ function BarberVaultMockup() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Notification strip */}
-      <div className="mt-2.5 grid grid-cols-2 gap-1.5">
-        {notifications.map((n) => (
-          <motion.div
-            key={n.title}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.35, ease: "easeOut", delay: n.delay }}
-            className="flex items-center gap-2 rounded-md border border-white/8 bg-[#111] px-2.5 py-1.5"
-          >
-            <span className="text-xs leading-none flex-shrink-0">{n.icon}</span>
-            <div className="min-w-0">
-              <div className="text-[10px] font-semibold text-white/90 leading-tight truncate">{n.title}</div>
-              <div className="text-[9px] text-white/35 leading-tight truncate">{n.body}</div>
-            </div>
-            <div className="ml-auto h-1 w-1 flex-shrink-0 rounded-full bg-[#FFD000]" />
-          </motion.div>
-        ))}
+        {/* Notification strip stacked beside phone */}
+        <div className="flex-1 grid grid-cols-1 gap-1.5 self-center">
+          {notifications.map((n) => (
+            <motion.div
+              key={n.title}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.35, ease: "easeOut", delay: n.delay }}
+              className="flex items-center gap-2 rounded-md border border-white/8 bg-[#111] px-2.5 py-2"
+            >
+              <span className="text-xs leading-none flex-shrink-0">{n.icon}</span>
+              <div className="min-w-0">
+                <div className="text-[10px] font-semibold text-white/90 leading-tight truncate">{n.title}</div>
+                <div className="text-[9px] text-white/35 leading-tight truncate">{n.body}</div>
+              </div>
+              <div className="ml-auto h-1 w-1 flex-shrink-0 rounded-full bg-[#FFD000]" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
