@@ -10,7 +10,7 @@ const lines = [
   "> All systems operational.",
 ];
 
-export default function BootScreen() {
+export default function BootScreen({ onComplete }: { onComplete?: () => void }) {
   const [visibleLines, setVisibleLines] = useState<number>(0);
   const [showPrompt, setShowPrompt] = useState(false);
   const [exiting, setExiting] = useState(false);
@@ -31,8 +31,12 @@ export default function BootScreen() {
 
   const handleEnter = () => {
     if (!showPrompt) return;
+    window.scrollTo(0, 0);
     setExiting(true);
-    setTimeout(() => setDone(true), 900);
+    setTimeout(() => {
+      setDone(true);
+      onComplete?.();
+    }, 900);
   };
 
   useEffect(() => {

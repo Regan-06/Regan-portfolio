@@ -5,13 +5,13 @@ import { ArrowRight, ChevronDown, Play } from "lucide-react";
 import ScrambleText from "./ScrambleText";
 import MagneticButton from "./MagneticButton";
 
-const fadeUp = (delay = 0) => ({
+const fadeUp = (booted: boolean, delay = 0) => ({
   initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
+  animate: booted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
   transition: { duration: 0.7, delay, ease: "easeOut" },
 });
 
-export default function Hero() {
+export default function Hero({ booted }: { booted: boolean }) {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20">
       <div className="absolute inset-0 grid-bg opacity-60" />
@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="absolute inset-y-0 right-[8%] w-px bg-white/[0.05]" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto">
-        <motion.div {...fadeUp(0.1)} className="mb-8 flex items-center justify-between border-y border-white/10 py-3">
+        <motion.div {...fadeUp(booted, 0.1)} className="mb-8 flex items-center justify-between border-y border-white/10 py-3">
           <div className="studio-label flex items-center gap-3 text-[10px] text-white/45">
             <span className="h-2 w-2 bg-[#FFD000] animate-pulse" />
             Available for new projects
@@ -31,19 +31,19 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          {...fadeUp(0.2)}
+          {...fadeUp(booted, 0.2)}
           className="display-font text-left text-[4.2rem] sm:text-7xl md:text-8xl lg:text-[8.5rem] font-bold leading-[0.82] mb-8"
         >
-          <span className="block text-white"><ScrambleText text="Websites" delay={200} /></span>
-          <span className="block text-[#FFD000]"><ScrambleText text="Content" delay={500} /></span>
+          <span className="block text-white"><ScrambleText text="Websites" delay={200} trigger={booted} /></span>
+          <span className="block text-[#FFD000]"><ScrambleText text="Content" delay={500} trigger={booted} /></span>
           <span className="block text-white">
-            <ScrambleText text="Software" delay={800} /><span className="text-white">.</span>
+            <ScrambleText text="Software" delay={800} trigger={booted} /><span className="text-white">.</span>
           </span>
         </motion.h1>
 
         <div className="grid gap-8 border-t border-white/10 pt-7 md:grid-cols-[1fr_auto] md:items-end">
           <motion.p
-            {...fadeUp(0.35)}
+            {...fadeUp(booted, 0.35)}
             className="max-w-2xl text-base md:text-lg text-white/55 leading-relaxed"
           >
             I&apos;m Regan, a developer and video editor who helps businesses
@@ -51,7 +51,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            {...fadeUp(0.5)}
+            {...fadeUp(booted, 0.5)}
             className="flex flex-col sm:flex-row items-stretch gap-3"
           >
             <MagneticButton>
@@ -76,7 +76,7 @@ export default function Hero() {
         </div>
 
         <motion.div
-          {...fadeUp(0.65)}
+          {...fadeUp(booted, 0.65)}
           className="mt-14 grid grid-cols-2 border border-white/10 bg-black/30"
         >
           {[
@@ -90,7 +90,7 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        <motion.div {...fadeUp(0.8)} className="mt-8">
+        <motion.div {...fadeUp(booted, 0.8)} className="mt-8">
           <div className="studio-label mb-2 flex justify-between text-[9px] text-white/25">
             <span>00:00:00</span>
             <span>00:00:08</span>
@@ -103,7 +103,7 @@ export default function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={booted ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >

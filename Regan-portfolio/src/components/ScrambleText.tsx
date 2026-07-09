@@ -9,17 +9,21 @@ export default function ScrambleText({
   className = "",
   delay = 0,
   speed = 40,
+  trigger = true,
 }: {
   text: string;
   className?: string;
   delay?: number;
   speed?: number;
+  trigger?: boolean;
 }) {
   const [display, setDisplay] = useState("");
   const frame = useRef(0);
   const timeout = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
+    if (!trigger) return;
+
     timeout.current = setTimeout(() => {
       let iteration = 0;
       clearInterval(frame.current);
@@ -46,7 +50,7 @@ export default function ScrambleText({
       clearTimeout(timeout.current);
       clearInterval(frame.current);
     };
-  }, [text, delay, speed]);
+  }, [text, delay, speed, trigger]);
 
   return <span className={className}>{display}</span>;
 }
