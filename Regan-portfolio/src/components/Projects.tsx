@@ -227,7 +227,7 @@ function ProjectMockup({ type }: { type: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-16 md:py-32 px-4 md:px-6 overflow-x-hidden">
+    <section id="projects" className="relative py-16 md:py-32 px-4 md:px-6 overflow-x-hidden z-10">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] to-[#0a0a0a]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFD000]/4 rounded-full blur-[100px] pointer-events-none" />
 
@@ -239,7 +239,7 @@ export default function Projects() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
-        className="absolute top-0 right-4 md:right-12 z-50 h-44 sm:h-56 md:h-72 w-auto object-contain object-top pointer-events-none select-none"
+        className="absolute top-0 right-4 md:right-12 z-10 h-44 sm:h-56 md:h-72 w-auto object-contain object-top pointer-events-none select-none"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -255,7 +255,7 @@ export default function Projects() {
           </div>
           <div className="relative md:text-right">
             {/* Text on top */}
-            <div className="relative z-10">
+            <div className="relative z-20">
               <h2 className="display-font text-4xl sm:text-5xl md:text-7xl font-bold leading-none">
                 <span className="gradient-text">Built by me</span>
               </h2>
