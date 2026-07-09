@@ -239,7 +239,7 @@ export default function Projects() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
-        className="absolute -top-24 md:-top-32 right-4 md:right-12 z-10 h-44 sm:h-56 md:h-72 w-auto object-contain object-top pointer-events-none select-none"
+        className="absolute -top-10 md:-top-14 right-4 md:right-12 z-10 h-44 sm:h-56 md:h-72 w-auto object-contain object-top pointer-events-none select-none"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto">
