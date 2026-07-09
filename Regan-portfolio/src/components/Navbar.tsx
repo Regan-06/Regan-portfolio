@@ -46,7 +46,7 @@ export default function Navbar() {
               href={l.href}
               className="group flex items-center gap-1.5 text-xs text-white/55 hover:text-white transition-colors duration-200"
             >
-              <span className="studio-label text-[9px] text-[#23D5E8]/60 group-hover:text-[#23D5E8]">
+              <span className="studio-label text-[9px] text-white/60 group-hover:text-white">
                 {l.number}
               </span>
               <span>{l.label}</span>
@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
-            className="studio-label text-[11px] px-4 py-2 bg-[#FFD000] text-black font-bold hover:bg-[#23D5E8] transition-colors duration-200"
+            className="studio-label text-[11px] px-4 py-2 bg-[#FFD000] text-black font-bold hover:bg-white transition-colors duration-200"
           >
             Let&apos;s Work Together
           </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center gap-3 border-b border-white/5 py-3 text-white/70 hover:text-white text-sm"
                 >
-                  <span className="studio-label text-[10px] text-[#23D5E8]">{l.number}</span>
+                  <span className="studio-label text-[10px] text-white">{l.number}</span>
                   {l.label}
                 </a>
               ))}

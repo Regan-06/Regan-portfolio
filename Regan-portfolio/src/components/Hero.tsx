@@ -25,7 +25,7 @@ export default function Hero() {
             <span className="h-2 w-2 bg-[#FFD000] animate-pulse" />
             Available for new projects
           </div>
-          <div className="studio-label hidden text-[10px] text-[#23D5E8]/70 sm:block">
+          <div className="studio-label hidden text-[10px] text-white/70 sm:block">
             Auckland / NZT / 2026
           </div>
         </motion.div>
@@ -37,7 +37,7 @@ export default function Hero() {
           <span className="block text-white"><ScrambleText text="Websites" delay={200} /></span>
           <span className="block text-[#FFD000]"><ScrambleText text="Content" delay={500} /></span>
           <span className="block text-white">
-            <ScrambleText text="Software" delay={800} /><span className="text-[#23D5E8]">.</span>
+            <ScrambleText text="Software" delay={800} /><span className="text-white">.</span>
           </span>
         </motion.h1>
 
@@ -57,7 +57,7 @@ export default function Hero() {
             <MagneticButton>
               <a
                 href="#contact"
-                className="group studio-label inline-flex items-center justify-center gap-3 bg-[#FFD000] px-6 py-4 text-xs font-bold text-black transition-colors hover:bg-[#23D5E8]"
+                className="group studio-label inline-flex items-center justify-center gap-3 bg-[#FFD000] px-6 py-4 text-xs font-bold text-black transition-colors hover:bg-white"
               >
                 Start a project
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -66,7 +66,7 @@ export default function Hero() {
             <MagneticButton>
               <a
                 href="#projects"
-                className="studio-label inline-flex items-center justify-center gap-3 border border-white/15 px-6 py-4 text-xs text-white/80 transition-colors hover:border-[#23D5E8] hover:text-[#23D5E8]"
+                className="studio-label inline-flex items-center justify-center gap-3 border border-white/15 px-6 py-4 text-xs text-white/80 transition-colors hover:border-white hover:text-white"
               >
                 <Play size={14} fill="currentColor" />
                 View work

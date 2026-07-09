@@ -7,7 +7,7 @@
 :root {
   --yellow: #FFD000;
   --yellow-light: #FFE033;
-  --cyan: #23D5E8;
+  --cyan: #ffffff;
   --bg: #080808;
   --surface: #0f0f0f;
   --surface-2: #161616;
@@ -68,7 +68,7 @@ h3 {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(90deg, #FFD000 0%, #FFE680 65%, #23D5E8 100%);
+  background: linear-gradient(90deg, #FFD000 0%, #FFE680 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -357,7 +357,7 @@ export default function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="studio-label mt-6 inline-flex w-fit items-center gap-2 border border-white/15 bg-white/[0.03] px-4 py-3 text-[10px] font-medium text-white/75 transition-all duration-200 hover:border-[#23D5E8] hover:text-[#23D5E8]"
+                      className="studio-label mt-6 inline-flex w-fit items-center gap-2 border border-white/15 bg-white/[0.03] px-4 py-3 text-[10px] font-medium text-white/75 transition-all duration-200 hover:border-white hover:text-white"
                     >
                       {project.linkLabel}
                       <ExternalLink size={14} />
