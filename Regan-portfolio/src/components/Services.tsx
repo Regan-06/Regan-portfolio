@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+
+const imgAnim = {
+  initial: { y: 80, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  viewport: { once: true, margin: "-40px" },
+  transition: { duration: 0.85, ease: [0.23, 1, 0.32, 1] as const, delay: 0.15 },
+};
 import { Globe, Video, Zap, Code2 } from "lucide-react";
 
 const services = [
@@ -85,6 +92,16 @@ export default function Services() {
   return (
     <section id="services" className="relative py-32 px-6 overflow-x-hidden z-0">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-[#0a0a0a] to-[#080808]" />
+
+      {/* Head portion — clip height must match -top-X in Projects so the seam aligns */}
+      <div className="absolute bottom-0 right-4 md:right-12 h-20 md:h-28 overflow-hidden pointer-events-none select-none z-10">
+        <motion.img
+          src="/regan-builtbyme.png"
+          alt=""
+          {...imgAnim}
+          className="h-44 sm:h-56 md:h-72 w-auto object-contain object-top"
+        />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
