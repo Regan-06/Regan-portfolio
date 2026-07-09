@@ -168,14 +168,17 @@ function SprtedMockup() {
             </div>
           </div>
 
-          {/* Right phone — static screenshot */}
+          {/* Right phone — screen recording */}
           <div className="group transition-all duration-300 hover:-translate-y-1">
             <div className="rounded-[1.7rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
               <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.35rem] bg-black">
                 <div className="absolute left-1/2 top-1.5 z-10 h-3 w-12 -translate-x-1/2 rounded-full bg-black/90" />
-                <img
-                  src="/sprted-edit-nuggets.png"
-                  alt="Mobile edit timeline for Denver Nuggets basketball graphic"
+                <video
+                  src="/sprted-phone-right.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="h-full w-full object-cover object-top"
                 />
                 <div className="absolute inset-x-8 bottom-1.5 h-0.5 rounded-full bg-white/70" />
