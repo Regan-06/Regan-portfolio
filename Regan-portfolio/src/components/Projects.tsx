@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Users, BarChart3, Scissors, Play, Palette } from "lucide-react";
+import { ExternalLink, Users, BarChart3, Scissors, Play } from "lucide-react";
 
 const projects = [
   {
@@ -41,25 +41,6 @@ const projects = [
     mockup: "sprted",
     link: "https://www.tiktok.com/@sprted",
     linkLabel: "View @sprted on TikTok",
-  },
-  {
-    id: "sports-graphics",
-    label: "Design Work",
-    title: "Sports Graphics",
-    description:
-      "Custom sports graphics, team announcements, player spotlights, and social media assets created for basketball teams. Clean, professional design work that gives teams a premium look across all their digital touchpoints.",
-    tags: ["Graphic Design", "Sports", "Social Media", "Branding"],
-    highlights: [
-      { icon: Palette, text: "Team announcement graphics" },
-      { icon: Users, text: "Player spotlight cards" },
-      { icon: BarChart3, text: "Social media assets" },
-    ],
-    accentColor: "#3b82f6",
-    bgGradient: "from-blue-500/10 via-transparent to-transparent",
-    borderColor: "border-blue-500/20",
-    mockup: "sports",
-    link: "",
-    linkLabel: "",
   },
 ];
 
@@ -192,40 +173,10 @@ function SprtedMockup() {
   );
 }
 
-function SportsMockup() {
-  return (
-    <div className="w-full h-full bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/10 p-4">
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-2 h-2 rounded-full bg-blue-400" />
-        <span className="text-blue-400 text-xs font-bold">Sports Graphics</span>
-      </div>
-      <div className="grid grid-cols-2 gap-2">
-        {/* Player spotlight */}
-        <div className="col-span-2 aspect-video rounded-lg bg-gradient-to-br from-blue-900/50 to-black flex items-center justify-center relative overflow-hidden border border-blue-500/20">
-          <div className="text-center">
-            <div className="text-xs font-bold text-white/80">PLAYER SPOTLIGHT</div>
-            <div className="text-[10px] text-white/40">Team Announcement</div>
-          </div>
-          <div className="absolute top-2 right-2 text-[10px] text-blue-400 font-bold">#24</div>
-        </div>
-        {/* Small cards */}
-        {["Game Day", "Stats Drop", "Roster"].map((t) => (
-          <div
-            key={t}
-            className="aspect-square rounded-lg bg-gradient-to-br from-blue-800/30 to-black border border-blue-500/10 flex items-center justify-center"
-          >
-            <span className="text-[10px] text-white/50">{t}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function ProjectMockup({ type }: { type: string }) {
   if (type === "barbervault") return <BarberVaultMockup />;
-  if (type === "sprted") return <SprtedMockup />;
-  return <SportsMockup />;
+  return <SprtedMockup />;
 }
 
 export default function Projects() {
