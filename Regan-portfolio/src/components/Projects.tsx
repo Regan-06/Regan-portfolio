@@ -45,10 +45,10 @@ const projects = [
 ];
 
 const notifications = [
-  { icon: "✂️", title: "New booking", body: "Jake M. — Friday 2:00pm", delay: 0.2 },
-  { icon: "⭐", title: "Review request sent", body: "Marcus T. just left the chair", delay: 1.4 },
-  { icon: "👥", title: "Queue update", body: "3 clients waiting · est. 45 min", delay: 2.6 },
-  { icon: "💰", title: "Revenue milestone", body: "This week: $1,240 · up 18%", delay: 3.8 },
+  { icon: "✂️", title: "New booking", body: "Jake M. — Friday 2:00pm", delay: 0.1 },
+  { icon: "⭐", title: "Review request sent", body: "Marcus T. just left the chair", delay: 0.4 },
+  { icon: "👥", title: "Queue update", body: "3 clients waiting · est. 45 min", delay: 0.7 },
+  { icon: "💰", title: "Revenue milestone", body: "This week: $1,240 · up 18%", delay: 1.0 },
 ];
 
 function BarberVaultMockup() {
