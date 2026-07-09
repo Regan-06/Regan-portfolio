@@ -92,7 +92,7 @@ function BarberVaultMockup() {
         </div>
 
         {/* Phone mockup */}
-        <div className="flex-[2]">
+        <div className="w-[110px] flex-shrink-0">
           <div className="rounded-[1.4rem] bg-[#111114] p-1.5 shadow-2xl shadow-black/55 ring-1 ring-white/12">
             <div className="relative aspect-[9/18.5] overflow-hidden rounded-[1.1rem] bg-black">
               <div className="absolute left-1/2 top-1.5 z-10 h-2.5 w-10 -translate-x-1/2 rounded-full bg-black/90" />
