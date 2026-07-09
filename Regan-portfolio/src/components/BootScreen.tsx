@@ -1,0 +1,132 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const lines = [
+  "> Initializing REGAN.OS v2026...",
+  "> Loading modules: [web_dev] [video_editing] [design]",
+  "> Connecting to portfolio server...",
+  "> All systems operational.",
+];
+
+export default function BootScreen() {
+  const [visibleLines, setVisibleLines] = useState<number>(0);
+  const [showPrompt, setShowPrompt] = useState(false);
+  const [exiting, setExiting] = useState(false);
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      i++;
+      setVisibleLines(i);
+      if (i >= lines.length) {
+        clearInterval(interval);
+        setTimeout(() => setShowPrompt(true), 400);
+      }
+    }, 600);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleEnter = () => {
+    if (!showPrompt) return;
+    setExiting(true);
+    setTimeout(() => setDone(true), 900);
+  };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Enter") handleEnter();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showPrompt]);
+
+  if (done) return null;
+
+  return (
+    <AnimatePresence>
+      {!exiting && (
+        <motion.div
+          key="boot"
+          initial={{ opacity: 1 }}
+          exit={{ y: "-100%", transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] } }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#080808] px-6"
+          onClick={handleEnter}
+        >
+          {/* Scanline overlay */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)",
+            }}
+          />
+
+          {/* Corner marks */}
+          <div className="absolute top-6 left-6 w-6 h-6 border-t border-l border-[#23D5E8]/40" />
+          <div className="absolute top-6 right-6 w-6 h-6 border-t border-r border-[#23D5E8]/40" />
+          <div className="absolute bottom-6 left-6 w-6 h-6 border-b border-l border-[#23D5E8]/40" />
+          <div className="absolute bottom-6 right-6 w-6 h-6 border-b border-r border-[#23D5E8]/40" />
+
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-12 text-center"
+          >
+            <h1
+              className="display-font text-[5rem] sm:text-[8rem] md:text-[11rem] font-bold leading-none tracking-tight"
+              style={{
+                background: "linear-gradient(90deg, #FFD000 0%, #FFE680 65%, #23D5E8 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              REGAN<span style={{ WebkitTextFillColor: "#23D5E8" }}>.</span>
+            </h1>
+          </motion.div>
+
+          {/* Terminal lines */}
+          <div className="w-full max-w-lg space-y-1.5 font-mono text-xs sm:text-sm text-white/40">
+            {lines.slice(0, visibleLines).map((line, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {line}
+              </motion.div>
+            ))}
+            {visibleLines < lines.length && (
+              <span className="inline-block w-2 h-4 bg-white/40 animate-pulse" />
+            )}
+          </div>
+
+          {/* Press enter prompt */}
+          <AnimatePresence>
+            {showPrompt && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className="absolute bottom-12 studio-label text-[11px] tracking-widest text-white/30"
+              >
+                <motion.span
+                  animate={{ opacity: [0.3, 1, 0.3] }}
+                  transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  PRESS ENTER OR CLICK TO CONTINUE
+                </motion.span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
