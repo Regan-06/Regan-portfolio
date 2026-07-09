@@ -353,15 +353,32 @@ export default function Projects() {
                   {project.id === "sprted" && <SprtedProfileStrip />}
 
                   {project.link && (
-                    <a
+                    <motion.a
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="studio-label mt-6 inline-flex w-fit items-center gap-2 border border-white/15 bg-white/[0.03] px-4 py-3 text-[10px] font-medium text-white/75 transition-all duration-200 hover:border-white hover:text-white"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      className="group studio-label mt-6 inline-flex w-fit items-center gap-2 overflow-hidden relative border px-4 py-3 text-[10px] font-medium transition-all duration-200"
+                      style={{
+                        borderColor: project.accentColor + "40",
+                        color: project.accentColor,
+                        backgroundColor: project.accentColor + "08",
+                      }}
                     >
-                      {project.linkLabel}
-                      <ExternalLink size={14} />
-                    </a>
+                      {/* Shimmer sweep */}
+                      <span
+                        className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out"
+                        style={{
+                          background: `linear-gradient(90deg, transparent, ${project.accentColor}18, transparent)`,
+                        }}
+                      />
+                      <span className="relative">{project.linkLabel}</span>
+                      <ExternalLink
+                        size={14}
+                        className="relative transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      />
+                    </motion.a>
                   )}
                 </div>
 
