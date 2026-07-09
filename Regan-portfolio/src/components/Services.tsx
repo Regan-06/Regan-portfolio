@@ -83,7 +83,7 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="relative py-32 px-6 overflow-x-hidden">
+    <section id="services" className="relative py-32 px-6 overflow-x-hidden z-0">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-[#0a0a0a] to-[#080808]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
