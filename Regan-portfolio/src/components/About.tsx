@@ -10,41 +10,59 @@ export default function About() {
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          {/* Photo — editorial frame */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative max-w-sm mx-auto md:mx-0 w-full"
           >
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full aspect-square max-w-sm mx-auto md:mx-0 rounded-2xl overflow-hidden border border-white/8"
-            >
+            {/* Yellow left bar */}
+            <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#FFD000] z-10" />
+
+            {/* Corner marks */}
+            <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-white/30 z-10" />
+            <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-white/30 z-10" />
+
+            {/* Image */}
+            <div className="relative aspect-[3/4] overflow-hidden ml-3">
               <Image
                 src="/regan-profile.jpg"
                 alt="Regan"
                 fill
-                className="object-cover"
+                className="object-cover object-top grayscale-[15%]"
                 sizes="(max-width: 768px) 100vw, 384px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090909]/60 to-transparent" />
-            </motion.div>
+              {/* Subtle bottom fade into section bg */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090909]/40 via-transparent to-transparent" />
+            </div>
 
+            {/* Studio label bottom-left */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="absolute -bottom-4 -right-4 md:bottom-4 md:-right-8 px-4 py-2.5 rounded-xl bg-[#0f0f0f] border border-white/10 text-sm font-medium"
+              className="absolute bottom-4 left-6 studio-label text-[9px] text-white/40 tracking-widest"
             >
-              <span className="text-[#FFD000]">Developer</span>
-              <span className="text-white/40 mx-1.5">/</span>
-              <span className="text-white/80">Video Editor</span>
+              REGAN MANT / NZL / 2026
+            </motion.div>
+
+            {/* Badge top-right */}
+            <motion.div
+              initial={{ opacity: 0, x: 10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="absolute -right-4 top-8 studio-label text-[9px] font-bold px-3 py-2 bg-[#FFD000] text-black"
+            >
+              DEV / EDITOR
             </motion.div>
           </motion.div>
 
+          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
