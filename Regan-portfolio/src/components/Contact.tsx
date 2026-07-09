@@ -8,11 +8,11 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1000));
-    setStatus("sent");
+    const subject = encodeURIComponent(`Project enquiry from ${form.name}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.location.href = `mailto:reganmant06@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
