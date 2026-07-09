@@ -71,30 +71,30 @@ function BarberVaultMockup() {
       </div>
 
       {/* Browser + phone side by side */}
-      <div className="flex gap-3 items-start">
+      <div className="flex gap-3 items-stretch">
         {/* Browser mockup */}
-        <div className="flex-1 rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40">
+        <div className="flex-1 rounded-lg border border-[#FFD000]/20 bg-[#161616] p-1.5 shadow-xl shadow-black/40 flex flex-col">
           <div className="mb-1.5 flex items-center gap-1.5 px-1">
             <div className="h-1.5 w-1.5 rounded-full bg-red-400/50" />
             <div className="h-1.5 w-1.5 rounded-full bg-yellow-400/50" />
             <div className="h-1.5 w-1.5 rounded-full bg-green-400/50" />
             <div className="ml-auto h-1 w-12 rounded-full bg-white/10" />
           </div>
-          <div className="overflow-hidden rounded-md bg-black">
+          <div className="overflow-hidden rounded-md bg-black flex-1">
             <video
               src="/barbervault-demo.mp4"
               autoPlay
               muted
               playsInline
-              className="aspect-video h-full w-full object-cover object-top"
+              className="h-full w-full object-cover object-top"
             />
           </div>
         </div>
 
-        {/* Phone mockup */}
-        <div className="w-[72px] flex-shrink-0">
-          <div className="rounded-[1.1rem] bg-[#111114] p-1 shadow-2xl shadow-black/55 ring-1 ring-white/12">
-            <div className="relative aspect-[9/18.5] overflow-hidden rounded-[0.85rem] bg-black">
+        {/* Phone mockup — matches browser height */}
+        <div className="w-[90px] flex-shrink-0">
+          <div className="h-full rounded-[1.1rem] bg-[#111114] p-1 shadow-2xl shadow-black/55 ring-1 ring-white/12">
+            <div className="relative h-full overflow-hidden rounded-[0.85rem] bg-black">
               <div className="absolute left-1/2 top-1 z-10 h-2 w-7 -translate-x-1/2 rounded-full bg-black/90" />
               <video
                 src="/barbervault-phone.mp4"
@@ -111,22 +111,21 @@ function BarberVaultMockup() {
       </div>
 
       {/* Notification stack */}
-      <div className="mt-3 space-y-2">
+      <div className="mt-2.5 grid grid-cols-2 gap-1.5">
         {notifications.map((n) => (
           <motion.div
             key={n.title}
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.45, ease: "easeOut", delay: n.delay }}
-            className="flex items-center gap-3 rounded-lg border border-white/8 bg-[#111] px-3 py-2.5"
+            transition={{ duration: 0.4, ease: "easeOut", delay: n.delay }}
+            className="flex items-center gap-2 rounded-lg border border-white/8 bg-[#111] px-2.5 py-2"
           >
-            <span className="text-base leading-none">{n.icon}</span>
-            <div className="min-w-0 flex-1">
-              <div className="text-[11px] font-semibold text-white/90 leading-tight">{n.title}</div>
-              <div className="text-[10px] text-white/40 leading-tight mt-0.5 truncate">{n.body}</div>
+            <span className="text-sm leading-none flex-shrink-0">{n.icon}</span>
+            <div className="min-w-0">
+              <div className="text-[10px] font-semibold text-white/90 leading-tight truncate">{n.title}</div>
+              <div className="text-[9px] text-white/40 leading-tight mt-0.5 truncate">{n.body}</div>
             </div>
-            <div className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#FFD000]" />
           </motion.div>
         ))}
       </div>
