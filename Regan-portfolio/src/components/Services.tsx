@@ -94,7 +94,7 @@ export default function Services() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-[#0a0a0a] to-[#080808]" />
 
       {/* Head portion — clip height must match -top-X in Projects so the seam aligns */}
-      <div className="absolute bottom-0 right-4 md:right-12 h-20 md:h-28 overflow-hidden pointer-events-none select-none z-10">
+      <div className="absolute bottom-0 left-4 md:left-auto md:right-12 h-20 md:h-28 overflow-hidden pointer-events-none select-none z-10">
         <motion.img
           src="/regan-builtbyme.png"
           alt=""
